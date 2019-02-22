@@ -60,7 +60,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\BlobTrigger.cs" />
     <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineBlendListCamera.cs" />
     <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineBrain.cs" />
     <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineClearShot.cs" />
@@ -114,8 +113,7 @@
     <Compile Include="Assets\Cinemachine\Timeline\CinemachineMixer.cs" />
     <Compile Include="Assets\Cinemachine\Timeline\CinemachineShot.cs" />
     <Compile Include="Assets\Cinemachine\Timeline\CinemachineTrack.cs" />
-    <Compile Include="Assets\FireBall.cs" />
-    <Compile Include="Assets\flameShoot.cs" />
+    <Compile Include="Assets\scripts\Enemies\BlobTrigger.cs" />
     <Compile Include="Assets\scripts\Enemies\BossDamage.cs" />
     <Compile Include="Assets\scripts\Enemies\BossGun.cs" />
     <Compile Include="Assets\scripts\Enemies\BossGunFire.cs" />
@@ -123,6 +121,9 @@
     <Compile Include="Assets\scripts\Enemies\EnemyBlobAnimate.cs" />
     <Compile Include="Assets\scripts\Enemies\EnemyDamage.cs" />
     <Compile Include="Assets\scripts\Enemies\EnemyMove.cs" />
+    <Compile Include="Assets\scripts\Enemies\FireBall.cs" />
+    <Compile Include="Assets\scripts\Enemies\flameShoot.cs" />
+    <Compile Include="Assets\scripts\Enemies\FlameTrigger.cs" />
     <Compile Include="Assets\scripts\GameManager.cs" />
     <Compile Include="Assets\scripts\plants\FlowerHeal.cs" />
     <Compile Include="Assets\scripts\Player\BodyMove.cs" />

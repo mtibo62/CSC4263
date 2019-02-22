@@ -25,6 +25,8 @@ public class EnemyDamage : MonoBehaviour
         {
             health--;
         }
+        if (col.gameObject.tag == "iceshot")
+            health -= 5;
 
     }
     // Update is called once per frame

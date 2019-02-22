@@ -35,6 +35,10 @@ public class SelectedWeapon : MonoBehaviour
                 sr.enabled = true;
                 gameObject.transform.position = weapons[1].transform.position;
                 break;
+            case 3:
+                sr.enabled = true;
+                gameObject.transform.position = weapons[2].transform.position;
+                break;
         }
     }
 }

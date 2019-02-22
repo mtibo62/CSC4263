@@ -47,11 +47,15 @@ public class PickUpWeapon : MonoBehaviour
                     case 2:
                         gun.GetComponent<RotationAnimationWeapons>().laser = true;
                         break;
+                    case 3:
+                        gun.GetComponent<RotationAnimationWeapons>().ice = true;
+                        break;
                 }
                 sr.enabled = true;
                 srv.enabled = true;
                 inventory.GetComponent<Inventory>().weaponType = weaponType;
                 inventory.GetComponent<Inventory>().inventory.Add(weaponType);
+                inventory.GetComponent<Inventory>().inventory.Sort();
                 Destroy(gameObject);
                 instructions.text = "";
             }

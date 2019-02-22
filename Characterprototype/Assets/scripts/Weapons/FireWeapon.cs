@@ -8,6 +8,7 @@ public class FireWeapon : MonoBehaviour
 
     public GameObject bulletPrefab;
     public GameObject waterdropPrefab;
+    public GameObject iciclePrefab;
     public GameObject obj;
     public GameObject inventory;
 
@@ -65,6 +66,13 @@ public class FireWeapon : MonoBehaviour
                                 bullet.GetComponent<Rigidbody2D>().AddForce(bullet.transform.forward * 8);
                                 soundFx.clip = laserFx;
                                 soundFx.Play();
+                                break;
+                            case 3:
+                                GameObject iceshot = Instantiate(iciclePrefab, transform.position, Quaternion.identity) as GameObject;
+                                iceshot.transform.LookAt(MousePos);
+                                iceshot.GetComponent<Rigidbody2D>().AddForce(iceshot.transform.forward * 8);
+                                soundFx.clip = laserFx;
+                                //soundFx.Play();
                                 break;
                         }
                     break;
