@@ -55,22 +55,16 @@ public class FireWeapon : MonoBehaviour
                         switch (weaponType) {
                             case 1:
                                 GameObject waterdrop = Instantiate(waterdropPrefab, transform.position, Quaternion.identity) as GameObject;
-                                waterdrop.transform.LookAt(MousePos);
-                                waterdrop.GetComponent<Rigidbody2D>().AddForce(waterdrop.transform.forward * .75f);
                                 soundFx.clip = SplashFX;
                                 soundFx.Play();
                                 break;
                             case 2:
                                 GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity) as GameObject;
-                                bullet.transform.LookAt(MousePos);
-                                bullet.GetComponent<Rigidbody2D>().AddForce(bullet.transform.forward * 8);
                                 soundFx.clip = laserFx;
                                 soundFx.Play();
                                 break;
                             case 3:
                                 GameObject iceshot = Instantiate(iciclePrefab, transform.position, Quaternion.identity) as GameObject;
-                                iceshot.transform.LookAt(MousePos);
-                                iceshot.GetComponent<Rigidbody2D>().AddForce(iceshot.transform.forward * 8);
                                 soundFx.clip = laserFx;
                                 //soundFx.Play();
                                 break;
@@ -85,13 +79,13 @@ public class FireWeapon : MonoBehaviour
     }
     private int canFire(float a)
     {
-        if (a <= 40 && a > 0)
+        if (a <= 30 && a > 0)
             return 1;
-        if (a <= 0 && a > -40)
+        if (a <= 0 && a > -30)
             return 1;
-        if (a <= 180 && a > 140)
+        if (a <= 180 && a > 130)
             return 1;
-        if (a <= -140 && a > -179f)
+        if (a <= -130 && a > -179f)
             return 1;
 
         return 0;

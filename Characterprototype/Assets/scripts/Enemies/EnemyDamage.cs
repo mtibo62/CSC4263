@@ -11,11 +11,13 @@ public class EnemyDamage : MonoBehaviour
 
     private SpriteRenderer sr;
     private int scored;
+    private Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
     {
         sr = healthBar.GetComponent<SpriteRenderer>();
+        rb = GetComponent<Rigidbody2D>();
         scored = 0;
     }
 
@@ -44,7 +46,8 @@ public class EnemyDamage : MonoBehaviour
                 gm.GetComponent<GameManager>().score += 25;
             scored++;
             sr.sprite = sprites[3];
-            gameObject.GetComponent<BoxCollider2D>().enabled = false;           
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            rb.AddForce(new Vector2(0, 5));
         }
         if (gameObject.transform.position.y < -8)
             Destroy(gameObject);

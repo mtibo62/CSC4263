@@ -43,8 +43,6 @@ public class BossGunFire : MonoBehaviour
             if (timeToFire <= 0)
             {
                 GameObject proj = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
-                proj.transform.LookAt(PlayerPos);
-                proj.GetComponent<Rigidbody2D>().AddForce(proj.transform.forward * 6);
                 timeToFire = time;
             }
         }

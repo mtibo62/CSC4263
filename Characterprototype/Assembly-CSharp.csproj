@@ -113,6 +113,8 @@
     <Compile Include="Assets\Cinemachine\Timeline\CinemachineMixer.cs" />
     <Compile Include="Assets\Cinemachine\Timeline\CinemachineShot.cs" />
     <Compile Include="Assets\Cinemachine\Timeline\CinemachineTrack.cs" />
+    <Compile Include="Assets\ExplosionAnimator.cs" />
+    <Compile Include="Assets\ProjectileVelocity.cs" />
     <Compile Include="Assets\scripts\Enemies\BlobTrigger.cs" />
     <Compile Include="Assets\scripts\Enemies\BossDamage.cs" />
     <Compile Include="Assets\scripts\Enemies\BossGun.cs" />
