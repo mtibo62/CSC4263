@@ -52,13 +52,13 @@ public class CrossHairs : MonoBehaviour {
     }   
     private int isVisible(float a)
     {
-        if (a <= 40 && a > 0)
+        if (a <= 30 && a > 0)
             return 1;
-        if (a <= 0 && a > -40)
+        if (a <= 0 && a > -30)
             return 1;
-        if (a <= 180 && a > 140)
+        if (a <= 180 && a > 130)
             return 1;
-        if (a <= -140 && a > -179f)
+        if (a <= -130 && a > -179f)
             return 1;
 
         return 0;
