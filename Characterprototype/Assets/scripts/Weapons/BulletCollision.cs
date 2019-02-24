@@ -28,6 +28,9 @@ public class BulletCollision : MonoBehaviour
             case 3:
                 anim = Instantiate(anima, transform.position, Quaternion.identity) as GameObject;
                 break;
+            case 15:
+                anim = Instantiate(anima, transform.position, Quaternion.identity) as GameObject;
+                break;
             default:
                 Destroy(gameObject);
                 break;

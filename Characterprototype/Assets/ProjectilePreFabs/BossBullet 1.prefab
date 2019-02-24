@@ -95,6 +95,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 268e44f5c32a083438d0d4e3d4cb53f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anima: {fileID: 6361234794896090986, guid: cfa5e4b9cdd3b8c4d9fa8d8fc2dee88b, type: 3}
+  Inventory: {fileID: 0}
+  weaponType: 15
 --- !u!70 &5682783245511229523
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
