@@ -24,6 +24,7 @@ public class FireWeapon : MonoBehaviour
     private AudioSource soundFx;
     public AudioClip laserFx;
     public AudioClip SplashFX;
+    public AudioClip IceFX;
 
 
     // Start is called before the first frame update
@@ -55,18 +56,21 @@ public class FireWeapon : MonoBehaviour
                         switch (weaponType) {
                             case 1:
                                 GameObject waterdrop = Instantiate(waterdropPrefab, transform.position, Quaternion.identity) as GameObject;
+                                waterdrop.GetComponent<BulletCollision>().weaponType = weaponType;
                                 soundFx.clip = SplashFX;
                                 soundFx.Play();
                                 break;
                             case 2:
                                 GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity) as GameObject;
+                                bullet.GetComponent<BulletCollision>().weaponType = weaponType;
                                 soundFx.clip = laserFx;
                                 soundFx.Play();
                                 break;
                             case 3:
                                 GameObject iceshot = Instantiate(iciclePrefab, transform.position, Quaternion.identity) as GameObject;
-                                soundFx.clip = laserFx;
-                                //soundFx.Play();
+                                iceshot.GetComponent<BulletCollision>().weaponType = weaponType;
+                                soundFx.clip = IceFX;
+                                soundFx.Play();
                                 break;
                         }
                     break;

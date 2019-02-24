@@ -4,32 +4,35 @@ using UnityEngine;
 
 public class BulletCollision : MonoBehaviour
 {
-    public GameObject LaserExplodeAnimation;
+    public GameObject anima;
     public GameObject Inventory;
 
-    private int weaponType;
+    public int weaponType;
+    private GameObject anim;
 
     void Start()
     {
-        weaponType = 2;
 
     }
 
     // Update is called once per frame
     public void OnCollisionEnter2D(Collision2D other)
     {
-        //weaponType = Inventory.GetComponent<Inventory>().weaponType;
         switch (weaponType)
         {
             case 1:
                 break;
             case 2:
-                GameObject anim = Instantiate(LaserExplodeAnimation, transform.position, Quaternion.identity) as GameObject;
+                anim = Instantiate(anima, transform.position, Quaternion.identity) as GameObject;
+                break;
+            case 3:
+                anim = Instantiate(anima, transform.position, Quaternion.identity) as GameObject;
                 break;
             default:
                 Destroy(gameObject);
                 break;
         }
+
         Destroy(gameObject);
     }
 }

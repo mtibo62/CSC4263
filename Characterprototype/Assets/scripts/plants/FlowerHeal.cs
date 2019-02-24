@@ -25,7 +25,6 @@ public class FlowerHeal : MonoBehaviour
             {
                 heal++;
             }
-            Destroy(col.gameObject);
         }
     }
     // Update is called once per frame

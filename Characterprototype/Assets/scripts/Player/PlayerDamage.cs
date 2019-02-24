@@ -1,17 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerDamage : MonoBehaviour
 {
     public Sprite[] sprites;
     public GameObject healthBar;
     public GameObject[] bodyParts;
+    public Text healthText;
     public int health = 10;
 
     System.Random rand = new System.Random();
 
     private SpriteRenderer sr;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -30,8 +34,12 @@ public class PlayerDamage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        healthText.text = health.ToString();
         if (health == 10)
+        {
             sr.enabled = false;
+            healthText.color = new Color(73, 172, 50);
+        }
         if (health <= 9)
         {
             sr.sprite = sprites[0];
@@ -42,13 +50,17 @@ public class PlayerDamage : MonoBehaviour
         if (health <= 7)
             sr.sprite = sprites[1];
         if (health <= 6)
+        {
             sr.sprite = sprites[2];
+            healthText.color = new Color(255, 255, 102);
+        }
         if (health <= 5)
             sr.sprite = sprites[3];
         if (health <= 4)
             sr.sprite = sprites[4];
         if (health <= 3)
             sr.sprite = sprites[5];
+        healthText.color = new Color(255, 76, 76);
         if (health <= 2)
             sr.sprite = sprites[6];
         if (health <= 0)

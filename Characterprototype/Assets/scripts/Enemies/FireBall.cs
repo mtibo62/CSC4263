@@ -5,9 +5,12 @@ using UnityEngine;
 public class FireBall : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameObject anima;
     public Rigidbody2D rb;
     public Vector2 velocity;
     private float timer;
+    private GameObject anim;
+
 
     // Use this for initialization
     void Start()
@@ -34,6 +37,7 @@ public class FireBall : MonoBehaviour
 
         if (col.collider.tag == "Player")
         {
+            anim = Instantiate(anima, transform.position, Quaternion.identity) as GameObject;
             Destroy(gameObject);
             //Explode();
         }

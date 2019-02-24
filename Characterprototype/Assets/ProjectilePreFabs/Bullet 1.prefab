@@ -117,10 +117,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 268e44f5c32a083438d0d4e3d4cb53f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LaserExplodeAnimation: {fileID: 5203308466775582339, guid: 32f45a9dbd0d6a04d935ae539557f835,
-    type: 3}
-  Inventory: {fileID: 2387753712152741007, guid: 5f946a24119edfd48a982e9cb777c483,
-    type: 3}
+  anima: {fileID: 5203308466775582339, guid: 32f45a9dbd0d6a04d935ae539557f835, type: 3}
+  Inventory: {fileID: 2025777620, guid: 6daacd4907dc1ae4e9cb5a8e5ce4bdf4, type: 3}
+  weaponType: 0
 --- !u!114 &3972535736592730551
 MonoBehaviour:
   m_ObjectHideFlags: 0

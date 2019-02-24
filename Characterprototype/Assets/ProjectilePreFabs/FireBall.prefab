@@ -110,8 +110,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf88ff9b37e86694d9e1c129d14c2e7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anima: {fileID: 5626496173884168760, guid: ecd6118c021309f44a5e44dea2d9269b, type: 3}
   rb: {fileID: 0}
-  exploson: {fileID: 0}
   velocity: {x: 0, y: 0}
 --- !u!50 &5863386455227831329
 Rigidbody2D:
