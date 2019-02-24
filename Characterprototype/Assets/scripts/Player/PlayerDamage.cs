@@ -82,14 +82,12 @@ public class PlayerDamage : MonoBehaviour
 
         Rigidbody2D rb0 = bodyParts[0].GetComponent<Rigidbody2D>();
         Rigidbody2D rb1 = bodyParts[1].GetComponent<Rigidbody2D>();
-        Rigidbody2D rb2 = bodyParts[2].GetComponent<Rigidbody2D>();
         Rigidbody2D rb3 = bodyParts[3].GetComponent<Rigidbody2D>();
         Rigidbody2D rb4 = bodyParts[4].GetComponent<Rigidbody2D>();
 
  
         rb0.AddForce(new Vector2((float)rand.NextDouble() * 10, (float)rand.NextDouble() * 5));
         rb1.AddForce(new Vector2((float)rand.NextDouble() * 10, (float)rand.NextDouble() * 5));
-        rb2.AddForce(new Vector2((float)rand.NextDouble() * 10, (float)rand.NextDouble() * 5));
         rb3.AddForce(new Vector2((float)rand.NextDouble() * 10, (float)rand.NextDouble() * 5));
         rb4.AddForce(new Vector2((float)rand.NextDouble() * 10, (float)rand.NextDouble() * 5)); 
     }
