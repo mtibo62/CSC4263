@@ -2275,7 +2275,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1066890952}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.95, y: -2.39, z: -11.239424}
+  m_LocalPosition: {x: -6.9499993, y: -2.3900003, z: -11.239424}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1346238873}
@@ -2783,7 +2783,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 069e1c85c3e95564387396c2e478d84e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 98f30692d10903545b2cdbbf04025dc7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3275,6 +3275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gm: {fileID: 941172842}
+  Apple: {fileID: 902226812538895617, guid: 19f4c3561e7908f4e9bab7788f11be5a, type: 3}
   tree:
   - {fileID: 21300012, guid: 7d907bdde56ae234bbd9470740f6ea96, type: 3}
   - {fileID: 21300018, guid: 7d907bdde56ae234bbd9470740f6ea96, type: 3}
@@ -3364,8 +3365,8 @@ MonoBehaviour:
   m_ScreenX: 0.5
   m_ScreenY: 0.5
   m_CameraDistance: 10
-  m_DeadZoneWidth: 0.1
-  m_DeadZoneHeight: 0.1
+  m_DeadZoneWidth: 0.05
+  m_DeadZoneHeight: 0.05
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
   m_SoftZoneWidth: 0.8
@@ -3446,7 +3447,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1758277556}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.95, y: -2.39, z: -11.239424}
+  m_LocalPosition: {x: -6.9499993, y: -2.3900003, z: -11.239424}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1634679044}

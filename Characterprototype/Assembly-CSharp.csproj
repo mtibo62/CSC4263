@@ -60,7 +60,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\AppleTrigger.cs" />
     <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineBlendListCamera.cs" />
     <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineBrain.cs" />
     <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineClearShot.cs" />
@@ -114,7 +113,6 @@
     <Compile Include="Assets\Cinemachine\Timeline\CinemachineMixer.cs" />
     <Compile Include="Assets\Cinemachine\Timeline\CinemachineShot.cs" />
     <Compile Include="Assets\Cinemachine\Timeline\CinemachineTrack.cs" />
-    <Compile Include="Assets\HealthApple.cs" />
     <Compile Include="Assets\scripts\Enemies\BlobTrigger.cs" />
     <Compile Include="Assets\scripts\Enemies\BossDamage.cs" />
     <Compile Include="Assets\scripts\Enemies\BossGun.cs" />
@@ -128,6 +126,8 @@
     <Compile Include="Assets\scripts\Enemies\flameShoot.cs" />
     <Compile Include="Assets\scripts\Enemies\FlameTrigger.cs" />
     <Compile Include="Assets\scripts\GameManager.cs" />
+    <Compile Include="Assets\scripts\Items\AppleTrigger.cs" />
+    <Compile Include="Assets\scripts\Items\HealthApple.cs" />
     <Compile Include="Assets\scripts\plants\FlowerHeal.cs" />
     <Compile Include="Assets\scripts\plants\TreeHeal.cs" />
     <Compile Include="Assets\scripts\Player\BodyMove.cs" />
