@@ -86,9 +86,9 @@ public class PlayerDamage : MonoBehaviour
         Rigidbody2D rb4 = bodyParts[4].GetComponent<Rigidbody2D>();
 
  
-        rb0.AddForce(new Vector2((float)rand.NextDouble() * 10, (float)rand.NextDouble() * 5));
-        rb1.AddForce(new Vector2((float)rand.NextDouble() * 10, (float)rand.NextDouble() * 5));
-        rb3.AddForce(new Vector2((float)rand.NextDouble() * 10, (float)rand.NextDouble() * 5));
-        rb4.AddForce(new Vector2((float)rand.NextDouble() * 10, (float)rand.NextDouble() * 5)); 
+        rb0.velocity = new Vector2(-4f, 10f);
+        rb1.velocity = new Vector2(6f, 8f);
+        rb3.velocity = new Vector2(-8f, 4f);
+        rb4.velocity = new Vector2(7f, 9f);
     }
 }
