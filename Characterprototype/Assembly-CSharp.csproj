@@ -129,11 +129,13 @@
     <Compile Include="Assets\scripts\Items\AppleTrigger.cs" />
     <Compile Include="Assets\scripts\Items\HealthApple.cs" />
     <Compile Include="Assets\scripts\plants\FlowerHeal.cs" />
+    <Compile Include="Assets\scripts\plants\IsHealed.cs" />
     <Compile Include="Assets\scripts\plants\TreeHeal.cs" />
     <Compile Include="Assets\scripts\Player\BodyMove.cs" />
     <Compile Include="Assets\scripts\Player\PlayerDamage.cs" />
     <Compile Include="Assets\scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\scripts\Player\PlayerWalkAnimation.cs" />
+    <Compile Include="Assets\scripts\Player\RobotDamageAnimation.cs" />
     <Compile Include="Assets\scripts\Player\RotationAnimation.cs" />
     <Compile Include="Assets\scripts\UI\Inventory.cs" />
     <Compile Include="Assets\scripts\UI\PlaySound.cs" />

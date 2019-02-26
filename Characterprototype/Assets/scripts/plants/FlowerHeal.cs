@@ -63,6 +63,7 @@ public class FlowerHeal : MonoBehaviour
             case 9://increment the score for healing it and add one more to trigger animation
                 sr.sprite = flowers[9];
                 gm.GetComponent<GameManager>().score += 50;
+                GetComponent<IsHealed>().healed = true;
                 heal++;
                 break;
             case 10:

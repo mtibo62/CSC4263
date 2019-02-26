@@ -25,15 +25,15 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKey("d"))
         {  
-            rb.position = new Vector2(rb.transform.position.x + .15f, rb.transform.position.y);
+            rb.position = new Vector2(rb.transform.position.x + .2f, rb.transform.position.y);
         }
         if (Input.GetKey("a"))
         {
-            rb.position = new Vector2(rb.transform.position.x - .15f, rb.transform.position.y);
+            rb.position = new Vector2(rb.transform.position.x - .2f, rb.transform.position.y);
         }
         if (Input.GetKeyDown("w") && jumpCount < 2)
         {
-            rb.AddForce(new Vector2(0, 6f), ForceMode2D.Impulse);
+            rb.AddForce(new Vector2(0, 8f), ForceMode2D.Impulse);
             jumpCount++;
         }
     }

@@ -21,7 +21,7 @@ public class EnemyMove : MonoBehaviour
     {
         Vector2 dir = target.transform.position - rb.transform.position;
 
-        if (triggered)
+        if (triggered && GetComponent<EnemyDamage>().health > 0)
             rb.transform.position += (target.transform.position - rb.transform.position).normalized * moveSpeed * Time.deltaTime;
     }
 }

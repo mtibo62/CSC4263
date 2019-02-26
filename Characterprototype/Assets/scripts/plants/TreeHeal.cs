@@ -8,7 +8,6 @@ public class TreeHeal : MonoBehaviour
     public GameObject Apple;
     public Sprite[] tree;
     public Sprite[] animate;
-
     private int heal;
     private SpriteRenderer sr;
     public float FPS;
@@ -62,6 +61,7 @@ public class TreeHeal : MonoBehaviour
                 break;
             case 24:
                 sr.sprite = tree[7];
+                GetComponent<IsHealed>().healed = true;
                 gm.GetComponent<GameManager>().score += 200;
                 GameObject hApple = Instantiate(Apple, transform.position, Quaternion.identity) as GameObject;
                 heal++;

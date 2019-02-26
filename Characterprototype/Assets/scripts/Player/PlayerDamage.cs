@@ -8,13 +8,15 @@ public class PlayerDamage : MonoBehaviour
     public Sprite[] sprites;
     public GameObject healthBar;
     public GameObject[] bodyParts;
+    public GameObject damage;
     public Text healthText;
     public int health = 10;
 
     System.Random rand = new System.Random();
 
     private SpriteRenderer sr;
-
+    public bool canTakeDamage;
+    private float coolDown;
 
 
     // Start is called before the first frame update
@@ -25,8 +27,12 @@ public class PlayerDamage : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.tag == "enemy" || col.gameObject.tag == "BossBullet")
+        if ((col.gameObject.tag == "enemy" || col.gameObject.tag == "BossBullet") && canTakeDamage)
         {
+            canTakeDamage = false;
+            coolDown = 2;
+            GameObject lighting = Instantiate(damage, transform.position, Quaternion.identity) as GameObject;
+            lighting.transform.parent = transform;
             health--;
         }
 
@@ -34,6 +40,11 @@ public class PlayerDamage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (coolDown >= 0)
+            coolDown -= Time.deltaTime;
+        if (coolDown <= 0)
+            canTakeDamage = true;
+
         healthText.text = health.ToString();
         if (health == 10)
         {

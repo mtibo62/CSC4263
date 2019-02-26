@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 1220435037851104957, guid: bfcd928533c668947a70be9d1e477e1f,
         type: 3}
       propertyPath: m_Name
-      value: PlatFormTile
+      value: PlatFormTile Long
       objectReference: {fileID: 0}
     - target: {fileID: 159789506041865722, guid: bfcd928533c668947a70be9d1e477e1f,
         type: 3}
@@ -67,15 +67,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 165786980775066149, guid: bfcd928533c668947a70be9d1e477e1f,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 50.964523
-      objectReference: {fileID: 0}
     - target: {fileID: 7767054507060868573, guid: bfcd928533c668947a70be9d1e477e1f,
         type: 3}
       propertyPath: m_Offset.x
-      value: -0.0000009536743
+      value: 0.03886223
       objectReference: {fileID: 0}
     - target: {fileID: 7767054507060868573, guid: bfcd928533c668947a70be9d1e477e1f,
         type: 3}
@@ -85,7 +80,12 @@ PrefabInstance:
     - target: {fileID: 7767054507060868573, guid: bfcd928533c668947a70be9d1e477e1f,
         type: 3}
       propertyPath: m_Size.x
-      value: 50.53389
+      value: 50.922504
+      objectReference: {fileID: 0}
+    - target: {fileID: 165786980775066149, guid: bfcd928533c668947a70be9d1e477e1f,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 50.964523
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfcd928533c668947a70be9d1e477e1f, type: 3}
