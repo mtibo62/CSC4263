@@ -9,6 +9,7 @@ public class FireWeapon : MonoBehaviour
     public GameObject bulletPrefab;
     public GameObject waterdropPrefab;
     public GameObject iciclePrefab;
+    public GameObject grenadePrefab;
     public GameObject obj;
     public GameObject inventory;
 
@@ -25,6 +26,7 @@ public class FireWeapon : MonoBehaviour
     public AudioClip laserFx;
     public AudioClip SplashFX;
     public AudioClip IceFX;
+    public AudioClip noobTube;
 
 
     // Start is called before the first frame update
@@ -70,6 +72,12 @@ public class FireWeapon : MonoBehaviour
                                 GameObject iceshot = Instantiate(iciclePrefab, transform.position, Quaternion.identity) as GameObject;
                                 iceshot.GetComponent<BulletCollision>().weaponType = weaponType;
                                 soundFx.clip = IceFX;
+                                soundFx.Play();
+                                break;
+                            case 4:
+                                GameObject grenade = Instantiate(grenadePrefab, transform.position, Quaternion.identity) as GameObject;
+                                grenade.GetComponent<BulletCollision>().weaponType = weaponType;
+                                soundFx.clip = noobTube;
                                 soundFx.Play();
                                 break;
                         }

@@ -6,7 +6,7 @@ public class FireBall : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject anima;
-    public Rigidbody2D rb;
+    private Rigidbody2D rb;
     public Vector2 velocity;
     private float timer;
     private GameObject anim;
