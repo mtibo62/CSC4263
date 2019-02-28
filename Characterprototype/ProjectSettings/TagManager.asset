@@ -11,6 +11,7 @@ TagManager:
   - waterdrop
   - BossBullet
   - iceshot
+  - grenade
   layers:
   - Default
   - TransparentFX

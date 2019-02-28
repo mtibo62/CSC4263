@@ -27,6 +27,7 @@ public class ProjectileVelocity : MonoBehaviour
             targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         else
             targetPos = target.transform.position;
+
         startPos = gameObject.transform.position;
 
         distance = targetPos.x - startPos.x;

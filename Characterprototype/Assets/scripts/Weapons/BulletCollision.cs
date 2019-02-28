@@ -52,7 +52,6 @@ public class BulletCollision : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (rb.velocity.y < velocity.y)
-            rb.velocity = velocity;
+       
     }
 }
