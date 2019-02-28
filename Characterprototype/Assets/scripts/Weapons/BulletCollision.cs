@@ -35,8 +35,11 @@ public class BulletCollision : MonoBehaviour
                 break;
             case 4:
                 rb.velocity = new Vector2(velocity.x, -velocity.y);
-                if (col.gameObject.tag == "enemy")
+                if (col.gameObject.tag == "enemy" || col.gameObject.tag == "boss" )
+                {
+                    anim = Instantiate(anima, transform.position, Quaternion.identity) as GameObject;
                     Destroy(gameObject);
+                }
                 break;
             case 15://boss weapon
                 anim = Instantiate(anima, transform.position, Quaternion.identity) as GameObject;

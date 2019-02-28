@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3645262441723515344}
   m_Layer: 8
   m_Name: Grenade
-  m_TagString: projectile
+  m_TagString: grenade
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 5
+  anima: {fileID: 5871683736559018568, guid: f7cc83c4e537d58459e83cb5feaf5119, type: 3}
 --- !u!50 &4079004686178858131
 Rigidbody2D:
   serializedVersion: 4
@@ -129,7 +130,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!70 &3645262441723515344
 CapsuleCollider2D:

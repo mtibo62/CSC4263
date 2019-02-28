@@ -5,17 +5,16 @@ using UnityEngine;
 public class GrenadeTimer : MonoBehaviour
 {
     public float timer;
-    void Start()
-    {
-        
-    }
-
+    public GameObject anima;
     // Update is called once per frame
     void Update()
     {
         timer -= Time.deltaTime;
         if (timer <= 0)
+        {
+            GameObject anim = Instantiate(anima, transform.position, Quaternion.identity) as GameObject;
             Destroy(gameObject);
+        }
         
     }
 }

@@ -46,7 +46,7 @@ public class PlayerDamage : MonoBehaviour
             canTakeDamage = true;
 
         healthText.text = health.ToString();
-        if (health == 10)
+       /* if (health == 10)
         {
             sr.enabled = false;
             healthText.color = new Color(73, 172, 50);
@@ -73,10 +73,10 @@ public class PlayerDamage : MonoBehaviour
             sr.sprite = sprites[5];
         healthText.color = new Color(255, 76, 76);
         if (health <= 2)
-            sr.sprite = sprites[6];
+            sr.sprite = sprites[6]; */
         if (health <= 0)
         {
-            sr.sprite = sprites[7];
+            //sr.sprite = sprites[7];
             transform.DetachChildren();
             Destroy(gameObject);
             Explode();
