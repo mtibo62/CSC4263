@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossGunFire : MonoBehaviour
+public class BossGunFire : MonoBehaviour, ISetTarget
 {
     public float timeToFire;
     public GameObject projectile;
     public GameObject obj;
     public GameObject Player;
     public GameObject trigger;
+    public GameObject target;
 
 
     private Vector2 ObjPos; //position of your object
@@ -26,24 +27,33 @@ public class BossGunFire : MonoBehaviour
         triggered = false;
     }
 
+    public void setTarget(GameObject targetPlayer)
+    {
+        Player = targetPlayer;
+        Debug.Log("Set in shoot");
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
-        ObjPos = obj.transform.position;
-        PlayerPos = Player.transform.position;
-        RelPos = PlayerPos - ObjPos;
-
-        angle = Mathf.Atan2(RelPos.x, RelPos.y);
-
-        angle = angle * Mathf.Rad2Deg;
-        timeToFire = timeToFire - Time.deltaTime;
-        triggered = trigger.GetComponent<BossTrigger>().fight;
-        if (canFire(angle) != 0 && triggered && gameObject.GetComponent<BoxCollider2D>().enabled)
+        if (Player != null)
         {
-            if (timeToFire <= 0)
+            ObjPos = obj.transform.position;
+            PlayerPos = Player.transform.position;
+            RelPos = PlayerPos - ObjPos;
+
+            angle = Mathf.Atan2(RelPos.x, RelPos.y);
+
+            angle = angle * Mathf.Rad2Deg;
+            timeToFire = timeToFire - Time.deltaTime;
+            //triggered = trigger.GetComponent<BossTrigger>().fight;
+            if (canFire(angle) != 0 && /*triggered &&*/ gameObject.GetComponent<BoxCollider2D>().enabled)
             {
-                GameObject proj = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
-                timeToFire = time;
+                if (timeToFire <= 0)
+                {
+                    GameObject proj = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
+                    timeToFire = time;
+                }
             }
         }
     }

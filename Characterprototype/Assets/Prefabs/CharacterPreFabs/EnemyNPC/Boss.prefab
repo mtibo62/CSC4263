@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6649490712664890995}
   - component: {fileID: 6649490712664891004}
   - component: {fileID: 6649490712664891005}
-  - component: {fileID: 6649490712664891006}
+  - component: {fileID: 1864677635328731634}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -110,7 +110,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 84.25895, y: 48.500546}
   m_EdgeRadius: 0
---- !u!114 &6649490712664891006
+--- !u!114 &1864677635328731634
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -272,6 +272,7 @@ MonoBehaviour:
   obj: {fileID: 6649490712725023006}
   Player: {fileID: 988342436, guid: 35d08707e09df3f479f55f37c4e5a4d5, type: 3}
   trigger: {fileID: 6649490712664891007}
+  target: {fileID: 0}
 --- !u!114 &6649490712725023004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -679,6 +680,7 @@ MonoBehaviour:
   obj: {fileID: 6649490713516952279}
   Player: {fileID: 988342436, guid: 35d08707e09df3f479f55f37c4e5a4d5, type: 3}
   trigger: {fileID: 6649490712664891007}
+  target: {fileID: 0}
 --- !u!114 &6649490713516952277
 MonoBehaviour:
   m_ObjectHideFlags: 0

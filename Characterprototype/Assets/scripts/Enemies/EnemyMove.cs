@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMove : MonoBehaviour
+public class EnemyMove : MonoBehaviour, ISetTarget
 {
 
     public GameObject target;
@@ -16,12 +16,21 @@ public class EnemyMove : MonoBehaviour
         triggered = false;
     }
 
+    public void setTarget(GameObject targetPlayer)
+    {
+        target = targetPlayer;
+        Debug.Log("Set in shoot");
+    }
+
     // Update is called once per frame
     void Update()
     {
-        Vector2 dir = target.transform.position - rb.transform.position;
+        if (target != null)
+        {
+            Vector2 dir = target.transform.position - rb.transform.position;
 
-        if (triggered && GetComponent<EnemyDamage>().health > 0)
-            rb.transform.position += (target.transform.position - rb.transform.position).normalized * moveSpeed * Time.deltaTime;
+            if (GetComponent<EnemyDamage>().health > 0)
+                rb.transform.position += (target.transform.position - rb.transform.position).normalized * moveSpeed * Time.deltaTime;
+        }
     }
 }

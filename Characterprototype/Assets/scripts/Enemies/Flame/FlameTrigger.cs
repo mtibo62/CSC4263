@@ -2,21 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossTrigger : MonoBehaviour
+public class FlameTrigger : MonoBehaviour
 {
-
-    public bool fight;
+    public static GameObject target;
+    public GameObject enemy;
     void Start()
     {
-        fight = false;
-    }
 
+    }
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "Player")
         {
             //enemy.GetComponent<flameShoot>().triggered = true;
-            gameObject.GetComponentInChildren<ISetTarget>().setTarget(col.gameObject);
+            gameObject.GetComponentInParent<ISetTarget>().setTarget(col.gameObject);
             //GetComponent<FlameMove>().player = col.gameObject;
             //target = col.gameObject;
         }
@@ -26,9 +25,8 @@ public class BossTrigger : MonoBehaviour
         if (col.gameObject.tag == "Player")
         {
             //enemy.GetComponent<flameShoot>().triggered = false;
-            gameObject.GetComponentInChildren<ISetTarget>().setTarget(null);
+            gameObject.GetComponentInParent<ISetTarget>().setTarget(null);
             //target = null;
         }
     }
-
 }
