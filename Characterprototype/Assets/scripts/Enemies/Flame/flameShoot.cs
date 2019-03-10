@@ -41,12 +41,19 @@ public class flameShoot : MonoBehaviour, ISetTarget
         target = targetPlayer;
         Debug.Log("Set in shoot");
     }
+    
+    void Update()
+    {
+        if(target != null)
+        {
+            Shoot();
+            Walk();
+        }
+    }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Shoot()
     {
-        if (target != null)
-        {
             ObjPos = obj.transform.position;
             targetPos = target.transform.position;
             RelPos = targetPos - ObjPos;
@@ -60,21 +67,21 @@ public class flameShoot : MonoBehaviour, ISetTarget
             {
                 if (direction(angle) == 1)
                 {
-                    sr.flipX = false;
+                    //sr.flipX = false;
                     GameObject go = Instantiate(projectile, (Vector2)transform.position + offset * transform.localScale.x, Quaternion.identity);
                     go.GetComponent<Rigidbody2D>().velocity = new Vector2(velocity.x * transform.localScale.x, velocity.y);
                     canShoot = 4;
                 }
                 else
                 {
-                    sr.flipX = true;
+                    //sr.flipX = true;
                     GameObject go = Instantiate(projectile, (Vector2)transform.position + offset * transform.localScale.x, Quaternion.identity);
                     go.GetComponent<Rigidbody2D>().velocity = new Vector2(-1 * (velocity.x * transform.localScale.x), velocity.y);
                     canShoot = 4;
                 }
             }
 
-        }
+        
     }
     private int direction(float a)
     {
@@ -85,15 +92,24 @@ public class flameShoot : MonoBehaviour, ISetTarget
     }
 
     //MOVING
-    void Update()
+    void Walk()
     {
-        if (GetComponent<EnemyDamage>().health > 0 && target != null)
+        if (GetComponent<EnemyDamage>().health > 0)
         {
             anim.SetBool("IsWalking", true);
             Vector2 dir = target.transform.position - rb.transform.position;
 
 
             rb.transform.position += (target.transform.position - rb.transform.position).normalized * 3 * Time.deltaTime;
+
+            if(target.transform.position.x > rb.transform.position.x)
+            {
+                sr.flipX = true;
+            }
+            else
+            {
+                sr.flipX = false;
+            }
         }
         else
         { 
