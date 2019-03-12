@@ -16,7 +16,12 @@ public class BossTrigger : MonoBehaviour
         if (col.gameObject.tag == "Player")
         {
             //enemy.GetComponent<flameShoot>().triggered = true;
-            gameObject.GetComponentInChildren<ISetTarget>().setTarget(col.gameObject);
+             Component[] setTarget = gameObject.GetComponentsInChildren(typeof(ISetTarget));
+
+            foreach ( ISetTarget target in setTarget)
+            {
+                target.setTarget(col.gameObject);
+            }
             //GetComponent<FlameMove>().player = col.gameObject;
             //target = col.gameObject;
         }
@@ -26,7 +31,12 @@ public class BossTrigger : MonoBehaviour
         if (col.gameObject.tag == "Player")
         {
             //enemy.GetComponent<flameShoot>().triggered = false;
-            gameObject.GetComponentInChildren<ISetTarget>().setTarget(null);
+            Component[] setTarget = gameObject.GetComponentsInChildren(typeof(ISetTarget));
+
+            foreach (ISetTarget target in setTarget)
+            {
+                target.setTarget(null);
+            }
             //target = null;
         }
     }

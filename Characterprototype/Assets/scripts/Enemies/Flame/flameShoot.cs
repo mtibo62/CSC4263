@@ -13,9 +13,6 @@ public class flameShoot : MonoBehaviour, ISetTarget
     public Vector2 offset = new Vector2(0.4f, 0.1f);
     public bool triggered;
 
-    public Animator anim;
-
-    private SpriteRenderer sr;
     private Rigidbody2D rb;
 
     private Vector2 ObjPos; //position of your object
@@ -29,10 +26,9 @@ public class flameShoot : MonoBehaviour, ISetTarget
     // Start is called before the first frame update
     void Start()
     {
-        sr = GetComponent<SpriteRenderer>();
+
         rb = GetComponent<Rigidbody2D>();
         canShoot = 0;
-        anim = GetComponent<Animator>();
         
     }
 
@@ -47,7 +43,6 @@ public class flameShoot : MonoBehaviour, ISetTarget
         if(target != null)
         {
             Shoot();
-            Walk();
         }
     }
 
@@ -91,30 +86,5 @@ public class flameShoot : MonoBehaviour, ISetTarget
             return 0;
     }
 
-    //MOVING
-    void Walk()
-    {
-        if (GetComponent<EnemyDamage>().health > 0)
-        {
-            anim.SetBool("IsWalking", true);
-            Vector2 dir = target.transform.position - rb.transform.position;
-
-
-            rb.transform.position += (target.transform.position - rb.transform.position).normalized * 3 * Time.deltaTime;
-
-            if(target.transform.position.x > rb.transform.position.x)
-            {
-                sr.flipX = true;
-            }
-            else
-            {
-                sr.flipX = false;
-            }
-        }
-        else
-        { 
-            anim.SetBool("IsWalking", false);
-        }
-    }
 }
 

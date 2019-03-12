@@ -15,7 +15,14 @@ public class FlameTrigger : MonoBehaviour
         if (col.gameObject.tag == "Player")
         {
             //enemy.GetComponent<flameShoot>().triggered = true;
-            gameObject.GetComponentInParent<ISetTarget>().setTarget(col.gameObject);
+            //gameObject.GetComponentInParent<ISetTarget>().setTarget(col.gameObject);
+
+            Component[] setTarget = gameObject.GetComponentsInParent(typeof(ISetTarget));
+
+            foreach (ISetTarget target in setTarget)
+            {
+                target.setTarget(col.gameObject);
+            }
             //GetComponent<FlameMove>().player = col.gameObject;
             //target = col.gameObject;
         }
@@ -25,7 +32,14 @@ public class FlameTrigger : MonoBehaviour
         if (col.gameObject.tag == "Player")
         {
             //enemy.GetComponent<flameShoot>().triggered = false;
-            gameObject.GetComponentInParent<ISetTarget>().setTarget(null);
+            //gameObject.GetComponentInParent<ISetTarget>().setTarget(null);
+            Component[] setTarget = gameObject.GetComponentsInParent(typeof(ISetTarget));
+
+            foreach (ISetTarget target in setTarget)
+            {
+                target.setTarget(null);
+            }
+
             //target = null;
         }
     }
