@@ -25,6 +25,7 @@ public class FlameTrigger : MonoBehaviour
             }
             //GetComponent<FlameMove>().player = col.gameObject;
             //target = col.gameObject;
+            
         }
     }
     private void OnTriggerExit2D(Collider2D col)

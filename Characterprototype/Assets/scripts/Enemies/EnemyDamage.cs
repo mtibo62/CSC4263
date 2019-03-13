@@ -17,7 +17,7 @@ public class EnemyDamage : MonoBehaviour
     void Start()
     {
         gm = GameObject.Find("GameManager");
-        sr = healthBar.GetComponent<SpriteRenderer>();
+        //sr = healthBar.GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         scored = 0;
     }
@@ -35,6 +35,8 @@ public class EnemyDamage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        /*
         if (health <= 6)
             sr.sprite = sprites[0];
         if (health <= 4)
@@ -52,6 +54,7 @@ public class EnemyDamage : MonoBehaviour
         }
         if (gameObject.transform.position.y < -8)
             Destroy(gameObject);
+        */
     }
 
 }
