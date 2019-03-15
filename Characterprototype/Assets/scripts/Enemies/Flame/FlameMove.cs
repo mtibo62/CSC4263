@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor.Animations;
 
-public class FlameMove : MonoBehaviour, ISetTarget
+public class FlameMove : EnemyMove
 {
-    public GameObject player;
+
     public Animator anim;
     private SpriteRenderer sr;
 
@@ -21,16 +21,11 @@ public class FlameMove : MonoBehaviour, ISetTarget
         sr = GetComponent<SpriteRenderer>();
     }
 
-    public void setTarget(GameObject target)
-    {
-        player = target;
-        Debug.Log("set in Move");
-    }
 
     // Update is called once per frame
     void Update()
     {
-        if (player != null)
+        if (target != null)
         {
             Walk();
             if (!anim.GetBool("IsWalking"))
@@ -54,12 +49,12 @@ public class FlameMove : MonoBehaviour, ISetTarget
         if (GetComponent<EnemyDamage>().health > 0)
         {
             //anim.SetBool("IsWalking", true);
-            Vector2 dir = player.transform.position - rb.transform.position;
+            Vector2 dir = target.transform.position - rb.transform.position;
 
 
-            rb.transform.position += (player.transform.position - rb.transform.position).normalized * 3 * Time.deltaTime;
+            rb.transform.position += (target.transform.position - rb.transform.position).normalized * 3 * Time.deltaTime;
 
-            if (player.transform.position.x > rb.transform.position.x)
+            if (target.transform.position.x > rb.transform.position.x)
             {
                 sr.flipX = true;
             }

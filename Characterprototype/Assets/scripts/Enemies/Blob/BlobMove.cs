@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMove : MonoBehaviour, ISetTarget
+public class BlobMove :  EnemyMove
 {
 
-    public GameObject target;
+    [HideInInspector]
     public Rigidbody2D rb;
+
     public int moveSpeed;
     public bool triggered;
 
@@ -14,13 +15,9 @@ public class EnemyMove : MonoBehaviour, ISetTarget
     void Start()
     {
         triggered = false;
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    public void setTarget(GameObject targetPlayer)
-    {
-        target = targetPlayer;
-        Debug.Log("Set in shoot");
-    }
 
     // Update is called once per frame
     void Update()

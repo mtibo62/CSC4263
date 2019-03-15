@@ -190,7 +190,6 @@ MonoBehaviour:
   canShoot: 3
   offset: {x: 0.4, y: 0.1}
   triggered: 0
-  anim: {fileID: 1759934288705794208}
 --- !u!82 &7923510386203358917
 AudioSource:
   m_ObjectHideFlags: 0

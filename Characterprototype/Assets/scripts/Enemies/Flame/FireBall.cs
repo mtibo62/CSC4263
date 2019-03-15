@@ -29,13 +29,13 @@ public class FireBall : MonoBehaviour
     }
 
 
-    void OnCollisionEnter2D(Collision2D col)
+    void OnTriggerEnter2D(Collider2D col)
     {
 
         rb.velocity = new Vector2(velocity.x, -velocity.y);
 
 
-        if (col.collider.tag == "Player")
+        if (col.tag == "Player")
         {
             anim = Instantiate(anima, transform.position, Quaternion.identity) as GameObject;
             Destroy(gameObject);
@@ -43,10 +43,10 @@ public class FireBall : MonoBehaviour
         }
 
 
-        if (col.contacts[0].normal.x != 0)
-        {
-            //Explode();
-        }
+        //if (col.contacts[0].normal.x != 0)
+        //{
+        //    //Explode();
+        //}
 
     }
 }

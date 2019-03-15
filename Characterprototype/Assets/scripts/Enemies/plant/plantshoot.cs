@@ -7,10 +7,10 @@ public class plantshoot : MonoBehaviour, ISetTarget
     public GameObject projectile;
     public GameObject target;
     public GameObject obj;//the object attached
+    public GameObject shooterOpening;
     public Vector2 velocity;
     public float canShoot;
     public Vector2 offset = new Vector2(0.4f, 0.1f);
-    public bool triggered;
 
     private Rigidbody2D rb;
 
@@ -48,7 +48,7 @@ public class plantshoot : MonoBehaviour, ISetTarget
     // Update is called once per frame
     void Shoot()
     {
-        ObjPos = obj.transform.position;
+        ObjPos = transform.position;
         targetPos = target.transform.position;
         RelPos = targetPos - ObjPos;
 
@@ -61,17 +61,20 @@ public class plantshoot : MonoBehaviour, ISetTarget
         {
             if (direction(angle) == 1)
             {
+                
                 //sr.flipX = false;
-                GameObject go = Instantiate(projectile, (Vector2)transform.position + offset * transform.localScale.x, Quaternion.identity);
+                GameObject go = Instantiate(projectile, shooterOpening.transform.position, Quaternion.identity);
                 go.GetComponent<Rigidbody2D>().velocity = new Vector2(velocity.x * transform.localScale.x, velocity.y);
-                canShoot = 4;
+                canShoot = 2.5f;
             }
             else
             {
                 //sr.flipX = true;
-                GameObject go = Instantiate(projectile, (Vector2)transform.position + offset * transform.localScale.x, Quaternion.identity);
-                go.GetComponent<Rigidbody2D>().velocity = new Vector2(-1 * (velocity.x * transform.localScale.x), velocity.y);
-                canShoot = 4;
+                GameObject go = Instantiate(projectile, /*(Vector2)transform.position + offset * transform.localScale.x*/ shooterOpening.transform.position, Quaternion.identity);
+                go.GetComponent<Rigidbody2D>().velocity = new Vector2(velocity.x * transform.localScale.x, velocity.y);
+                //velocity here is positive because the local scale of the entire plant enemy is being swapped to negative when the player moves on the right side.
+                //see plantmove.cs line 36
+                canShoot = 2.5f;
             }
         }
 

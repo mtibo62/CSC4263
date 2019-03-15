@@ -26,6 +26,7 @@ public class EnemyDamage : MonoBehaviour
     {
         if (col.gameObject.tag == "projectile")
         {
+            Debug.Log("Hit");
             health--;
         }
         if (col.gameObject.tag == "iceshot")

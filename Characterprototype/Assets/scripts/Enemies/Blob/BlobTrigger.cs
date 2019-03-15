@@ -11,13 +11,13 @@ public class BlobTrigger : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Player")
-            blob.GetComponent<EnemyMove>().triggered = true;
+        if (col.gameObject.tag == "Player") { }
+            //blob.GetComponent<EnemyMove>().triggered = true;
     }
     private void OnTriggerExit2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Player")
-            blob.GetComponent<EnemyMove>().triggered = false;
+        if (col.gameObject.tag == "Player") { }
+           // blob.GetComponent<EnemyMove>().triggered = false;
     }
    
 
