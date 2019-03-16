@@ -29,7 +29,7 @@ public class YetiMove : EnemyMove
             float xdir = target.transform.position.x - rb.transform.position.x;
             float ydir = target.transform.position.y - rb.transform.position.y;
 
-            if (GetComponent<EnemyDamage>().health > 0 && ( Mathf.Abs(xdir) > 2.5 ))
+            if (GetComponent<EnemyDamage>().health > 0 && ( Mathf.Abs(xdir) > 2.2 ))
                 rb.transform.position += (target.transform.position - rb.transform.position).normalized * moveSpeed * Time.deltaTime;
                 
 

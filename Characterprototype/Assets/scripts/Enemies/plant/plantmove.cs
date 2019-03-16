@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class plantmove : EnemyMove
 {
+
+    public Animator anim;
+    private SpriteRenderer sr;
+
     [HideInInspector]
     public Rigidbody2D rb;
 
     public int moveSpeed;
     public bool triggered;
 
-    public float localScaleSetNum;
+    private float localScaleSetNum;
 
     // Start is called before the first frame update
     void Start()
@@ -18,11 +22,34 @@ public class plantmove : EnemyMove
         localScaleSetNum = transform.localScale.x;
         triggered = false;
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+        sr = GetComponent<SpriteRenderer>();
+    }
+
+    private void Update()
+    {
+        if (target != null)
+        {
+            Walk();
+            if (!anim.GetBool("IsWalking"))
+            {
+                anim.SetBool("IsWalking", true);
+            }
+        }
+        else
+        {
+            if (anim.GetBool("IsWalking"))
+            {
+                anim.SetBool("IsWalking", false);
+            }
+        }
+
+      
     }
 
 
     // Update is called once per frame
-    void Update()
+    void Walk()
     {
         if (target != null)
         {
@@ -31,7 +58,7 @@ public class plantmove : EnemyMove
             if (GetComponent<EnemyDamage>().health > 0)
                 rb.transform.position += (target.transform.position - rb.transform.position).normalized * moveSpeed * Time.deltaTime;
 
-            if (target.transform.position.x > rb.transform.localScale.x)
+            if (target.transform.position.x > rb.transform.position.x)
             {
                 transform.localScale = new Vector3(-localScaleSetNum, transform.localScale.y, 0);
             }

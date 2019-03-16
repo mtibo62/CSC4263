@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7185274324019033903}
   - component: {fileID: 1403155121343926915}
   - component: {fileID: 4805577510621043851}
-  - component: {fileID: 2521030368538794720}
+  - component: {fileID: 5967258851412123161}
   - component: {fileID: 1243965558390087097}
   m_Layer: 11
   m_Name: PlantSeed
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1893096676120365789}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 42.732, y: -3.163, z: 2.768594}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 1}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 1}
   m_Children:
   - {fileID: 7353871995225518250}
   m_Father: {fileID: 0}
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300004, guid: f045156a3b6276c4d8fb05a1108a898d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3496bcb6288a4f3448ce0e556066a53d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,7 +99,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 7, y: 7}
   m_Direction: 0
---- !u!114 &2521030368538794720
+--- !u!114 &5967258851412123161
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,11 +108,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1893096676120365789}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf88ff9b37e86694d9e1c129d14c2e7b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1eb1347695fc42b4396d317ee99caad5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anima: {fileID: 5626496173884168760, guid: ecd6118c021309f44a5e44dea2d9269b, type: 3}
-  velocity: {x: 0, y: 0}
 --- !u!50 &1243965558390087097
 Rigidbody2D:
   serializedVersion: 4
