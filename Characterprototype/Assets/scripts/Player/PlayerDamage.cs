@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerDamage : MonoBehaviour
+public class PlayerDamage : MonoBehaviour, IDamageable
 {
     public Sprite[] sprites;
     public GameObject healthBar;
@@ -36,6 +36,18 @@ public class PlayerDamage : MonoBehaviour
             health--;
         }
 
+    }
+
+    public void TakeDamage(int damageTaken)
+    {
+        if (canTakeDamage)
+        {
+            canTakeDamage = false;
+            coolDown = 2;
+            health = health - damageTaken;
+            GameObject lighting = Instantiate(damage, transform.position, Quaternion.identity) as GameObject;
+            lighting.transform.parent = transform;
+        }
     }
     // Update is called once per frame
     void Update()

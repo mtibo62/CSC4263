@@ -9,7 +9,6 @@ public class YetiMove : EnemyMove
     public Rigidbody2D rb;
 
     public int moveSpeed;
-    public bool triggered;
 
     public float localScaleSetNum;
 
@@ -17,7 +16,7 @@ public class YetiMove : EnemyMove
     void Start()
     {
         localScaleSetNum = transform.localScale.x;
-        triggered = false;
+        
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -29,8 +28,18 @@ public class YetiMove : EnemyMove
             float xdir = target.transform.position.x - rb.transform.position.x;
             float ydir = target.transform.position.y - rb.transform.position.y;
 
-            if (GetComponent<EnemyDamage>().health > 0 && ( Mathf.Abs(xdir) > 2.2 ))
-                rb.transform.position += (target.transform.position - rb.transform.position).normalized * moveSpeed * Time.deltaTime;
+            if (GetComponent<EnemyDamage>().health > 0)
+            {
+                if (Mathf.Abs(xdir) > 2.2)
+                {
+                    rb.transform.position += (target.transform.position - rb.transform.position).normalized * moveSpeed * Time.deltaTime;
+                }
+                else
+                {
+                    Debug.Log("Check");
+                    StartCoroutine(GetComponent<YetiAttack>().Attack());
+                }
+            }
                 
 
             if (target.transform.position.x > rb.transform.localScale.x)

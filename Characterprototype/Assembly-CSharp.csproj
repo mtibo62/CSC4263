@@ -120,12 +120,13 @@
     <Compile Include="Assets\scripts\Enemies\Blob\EnemyBlobAnimate.cs" />
     <Compile Include="Assets\scripts\Enemies\EnemyDamage.cs" />
     <Compile Include="Assets\scripts\Enemies\EnemyMove.cs" />
+    <Compile Include="Assets\scripts\Enemies\EvilFlower\EvilFlowerAttack.cs" />
+    <Compile Include="Assets\scripts\Enemies\EvilFlower\EvilFlowerMove.cs" />
     <Compile Include="Assets\scripts\Enemies\Flame\FireBall.cs" />
     <Compile Include="Assets\scripts\Enemies\Flame\FlameAnimCont.cs" />
     <Compile Include="Assets\scripts\Enemies\Flame\FlameMove.cs" />
     <Compile Include="Assets\scripts\Enemies\Flame\flameShoot.cs" />
     <Compile Include="Assets\scripts\Enemies\Flame\FlameTrigger.cs" />
-    <Compile Include="Assets\scripts\Enemies\Interfaces\ISetTarget.cs" />
     <Compile Include="Assets\scripts\Enemies\plant\plantmove.cs" />
     <Compile Include="Assets\scripts\Enemies\plant\plantshoot.cs" />
     <Compile Include="Assets\scripts\Enemies\plant\seedshoot.cs" />
@@ -135,7 +136,10 @@
     <Compile Include="Assets\scripts\Enemies\roboboss\BossTrigger.cs" />
     <Compile Include="Assets\scripts\Enemies\Yeti\YetiAttack.cs" />
     <Compile Include="Assets\scripts\Enemies\Yeti\YetiMove.cs" />
+    <Compile Include="Assets\scripts\Enemies\Yeti\YetiPunchHitBox.cs" />
     <Compile Include="Assets\scripts\GameManager.cs" />
+    <Compile Include="Assets\scripts\Interfaces\IDamageable.cs" />
+    <Compile Include="Assets\scripts\Interfaces\ISetTarget.cs" />
     <Compile Include="Assets\scripts\Items\AppleTrigger.cs" />
     <Compile Include="Assets\scripts\Items\HealthApple.cs" />
     <Compile Include="Assets\scripts\plants\FlowerHeal.cs" />

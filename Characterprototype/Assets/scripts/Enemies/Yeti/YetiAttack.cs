@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class YetiAttack : MonoBehaviour
 {
+
+    public GameObject hitBox;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +16,13 @@ public class YetiAttack : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public IEnumerator Attack()
+    {
+        hitBox.GetComponent<BoxCollider2D>().enabled = true;
+        Debug.Log("Attack");
+        yield return new WaitForSeconds(2);
+        hitBox.GetComponent<BoxCollider2D>().enabled = false;
     }
 }
