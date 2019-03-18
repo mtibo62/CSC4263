@@ -8,6 +8,7 @@ public class RotationAnimationWeapons : MonoBehaviour
     public Sprite[] wateringCan;
     public Sprite[] iceray;
     public Sprite[] launcher;
+    public Sprite[] lighting;
     public GameObject obj;
     public GameObject inventory;
 
@@ -20,14 +21,14 @@ public class RotationAnimationWeapons : MonoBehaviour
     private float angle; //degrees 
     private int weaponType;
 
-    public bool water, laser, fire, ice, grenade;
+    public bool water, laser, fire, ice, grenade, lightgun;
 
 
     // Start is called before the first frame update
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
-        water = laser = fire = ice = grenade = false;//these check to see if we've acquired that particular weapon
+        water = laser = fire = ice = grenade = lightgun = false;//these check to see if we've acquired that particular weapon
     }
 
     // Update is called once per frame
@@ -517,6 +518,128 @@ public class RotationAnimationWeapons : MonoBehaviour
                 default:
                     sr.flipX = false;
                     sr.sprite = launcher[0];
+                    break;
+            }
+        }//iceray
+       if (weaponType == 5 && lightgun)//lighting
+       {
+            switch (LookAround(angle))
+            {
+                case 1:
+                    sr.flipX = false;
+                    sr.sprite = lighting[1];//look up
+                    break;
+                case 2:
+                    sr.flipX = false;
+                    sr.sprite = lighting[2];
+                    break;
+                case 3:
+                    sr.flipX = false;
+                    sr.sprite = lighting[3];
+                    break;
+                case 4:
+                    sr.flipX = false;
+                    sr.sprite = lighting[4];
+                    break;
+                case 5:
+                    sr.flipX = false;
+                    sr.sprite = lighting[5];
+                    break;
+                case 6:
+                    sr.flipX = false;
+                    sr.sprite = lighting[11];//swing around
+                    break;
+                case 7:
+                    sr.flipX = false;
+                    sr.sprite = lighting[12];
+                    break;
+                case 8:
+                    sr.flipX = false;
+                    sr.sprite = lighting[13];
+                    break;
+                case 9:
+                    sr.flipX = true;
+                    sr.sprite = lighting[13];
+                    break;
+                case 10:
+                    sr.flipX = true;
+                    sr.sprite = lighting[12];
+                    break;
+                case 11:
+                    sr.flipX = true;
+                    sr.sprite = lighting[11];
+                    break;
+                case 12:
+                    sr.flipX = true;
+                    sr.sprite = lighting[5];
+                    break;
+                case 13:
+                    sr.flipX = true;
+                    sr.sprite = lighting[4];
+                    break;
+                case 14:
+                    sr.flipX = true;
+                    sr.sprite = lighting[3];
+                    break;
+                case 15:
+                    sr.flipX = true;
+                    sr.sprite = lighting[2];
+                    break;
+                case 16:
+                    sr.flipX = true;
+                    sr.sprite = lighting[1];
+                    break;
+                case 17:
+                    sr.flipX = true;
+                    sr.sprite = lighting[0];
+                    break;
+                case 18:
+                    sr.flipX = true;
+                    sr.sprite = lighting[7];//look down left
+                    break;
+                case 19:
+                    sr.flipX = true;
+                    sr.sprite = lighting[6];
+                    break;
+                case 20:
+                    sr.flipX = true;
+                    sr.sprite = lighting[8];
+                    break;
+                case 21:
+                    sr.flipX = true;
+                    sr.sprite = lighting[9];//swing down around
+                    break;
+                case 22:
+                    sr.flipX = true;
+                    sr.sprite = lighting[10];
+                    break;
+                case 23:
+                    sr.flipX = false;
+                    sr.sprite = lighting[10];
+                    break;
+                case 24:
+                    sr.flipX = false;
+                    sr.sprite = lighting[10];
+                    break;
+                case 25:
+                    sr.flipX = false;
+                    sr.sprite = lighting[8];
+                    break;
+                case 26:
+                    sr.flipX = false;
+                    sr.sprite = lighting[7];
+                    break;
+                case 27:
+                    sr.flipX = false;
+                    sr.sprite = lighting[6];
+                    break;
+                case 28:
+                    sr.flipX = false;
+                    sr.sprite = lighting[0];
+                    break;
+                default:
+                    sr.flipX = false;
+                    sr.sprite = lighting[0];
                     break;
             }
         }//iceray

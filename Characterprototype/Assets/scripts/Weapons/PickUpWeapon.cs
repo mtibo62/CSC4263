@@ -53,6 +53,9 @@ public class PickUpWeapon : MonoBehaviour
                     case 4:
                         gun.GetComponent<RotationAnimationWeapons>().grenade = true;
                         break;
+                    case 5:
+                        gun.GetComponent<RotationAnimationWeapons>().lightgun = true;
+                        break;
                 }
                 sr.enabled = true;
                 srv.enabled = true;
