@@ -6,6 +6,8 @@ using UnityEngine;
 public class ProjectileVelocity : MonoBehaviour
 {
     public GameObject target;
+    public GameObject trip2;
+    public GameObject trip3;
     public float power;
 
     private Vector2 targetPos;
@@ -20,7 +22,7 @@ public class ProjectileVelocity : MonoBehaviour
     private float x, y;
 
     void Start()
-    {
+    { 
         sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         if (target == null)
@@ -38,6 +40,11 @@ public class ProjectileVelocity : MonoBehaviour
         y = (float)Math.Sin(angle + angleCorrection) * power;
         if (x < 0)
             sr.flipX = true;
+        if (GetComponent<GameObject>().Equals(trip2))
+            rb.velocity = new Vector2(0, y);
+        if (GetComponent<GameObject>().Equals(trip3))
+            rb.velocity = new Vector2(0, y);
+
         rb.velocity = new Vector2(x, y);
     }
 }

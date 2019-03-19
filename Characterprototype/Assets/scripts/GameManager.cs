@@ -11,14 +11,24 @@ public class GameManager : MonoBehaviour
     public int score;
     public Text scoreText;
     public Text levelProgress;
+    public bool isAlive;
     private float numLevelAssets;
     private float assetsLeft;
     private float progress;
     // Start is called before the first frame update
     void Start()
     {
+        StartCoroutine(death());
         Cursor.visible = false;
         numLevelAssets = plants.Count + enemies.Count; 
+    }
+    IEnumerator death()
+    {
+        if (!isAlive)
+        {
+            yield return new WaitForSecondsRealtime(3);
+
+        }
     }
 
     // Update is called once per frame
@@ -37,5 +47,6 @@ public class GameManager : MonoBehaviour
                 enemies.RemoveAt(i);
         }
         scoreText.text = score.ToString();
+
     }
 }

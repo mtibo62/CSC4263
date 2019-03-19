@@ -11,6 +11,7 @@ public class FireWeapon : MonoBehaviour
     public GameObject iciclePrefab;
     public GameObject grenadePrefab;
     public GameObject boltPrefab;
+    public GameObject[] tripPrefab;
     public GameObject obj;
     public GameObject inventory;
 
@@ -85,6 +86,14 @@ public class FireWeapon : MonoBehaviour
                             case 5:
                                 GameObject bolt = Instantiate(boltPrefab, transform.position, Quaternion.identity) as GameObject;
                                 bolt.GetComponent<BulletCollision>().weaponType = weaponType;
+                                soundFx.clip = BoltFX;
+                                soundFx.Play();
+                                break;
+                            case 6:
+                                GameObject trip1 = Instantiate(tripPrefab[0], transform.position, Quaternion.identity) as GameObject;
+                                GameObject trip2 = Instantiate(tripPrefab[1], transform.position, Quaternion.identity) as GameObject;
+                                GameObject trip3 = Instantiate(tripPrefab[2], transform.position, Quaternion.identity) as GameObject;
+                                trip1.GetComponent<BulletCollision>().weaponType = weaponType;
                                 soundFx.clip = BoltFX;
                                 soundFx.Play();
                                 break;

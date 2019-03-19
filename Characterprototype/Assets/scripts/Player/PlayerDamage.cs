@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerDamage : MonoBehaviour, IDamageable
 {
+    public GameObject gm;
     public Sprite[] sprites;
     public GameObject healthBar;
     public GameObject[] bodyParts;
@@ -113,5 +114,6 @@ public class PlayerDamage : MonoBehaviour, IDamageable
         rb1.velocity = new Vector2(6f, 8f);
         rb3.velocity = new Vector2(-8f, 4f);
         rb4.velocity = new Vector2(7f, 9f);
+        gm.GetComponent<GameManager>().isAlive = false;
     }
 }

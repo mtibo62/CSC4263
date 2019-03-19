@@ -9,6 +9,7 @@ public class RotationAnimationWeapons : MonoBehaviour
     public Sprite[] iceray;
     public Sprite[] launcher;
     public Sprite[] lighting;
+    public Sprite[] tripleShot;
     public GameObject obj;
     public GameObject inventory;
 
@@ -21,7 +22,7 @@ public class RotationAnimationWeapons : MonoBehaviour
     private float angle; //degrees 
     private int weaponType;
 
-    public bool water, laser, fire, ice, grenade, lightgun;
+    public bool water, laser, fire, ice, grenade, lightgun, triple;
 
 
     // Start is called before the first frame update
@@ -520,7 +521,7 @@ public class RotationAnimationWeapons : MonoBehaviour
                     sr.sprite = launcher[0];
                     break;
             }
-        }//iceray
+        }//grenade
        if (weaponType == 5 && lightgun)//lighting
        {
             switch (LookAround(angle))
@@ -640,6 +641,128 @@ public class RotationAnimationWeapons : MonoBehaviour
                 default:
                     sr.flipX = false;
                     sr.sprite = lighting[0];
+                    break;
+            }
+        }//lightning
+       if (weaponType == 6 && triple)//tripleShot
+        {
+            switch (LookAround(angle))
+            {
+                case 1:
+                    sr.flipX = false;
+                    sr.sprite = tripleShot[1];//look up
+                    break;
+                case 2:
+                    sr.flipX = false;
+                    sr.sprite = tripleShot[2];
+                    break;
+                case 3:
+                    sr.flipX = false;
+                    sr.sprite = tripleShot[3];
+                    break;
+                case 4:
+                    sr.flipX = false;
+                    sr.sprite = tripleShot[4];
+                    break;
+                case 5:
+                    sr.flipX = false;
+                    sr.sprite = tripleShot[5];
+                    break;
+                case 6:
+                    sr.flipX = false;
+                    sr.sprite = tripleShot[11];//swing around
+                    break;
+                case 7:
+                    sr.flipX = false;
+                    sr.sprite = tripleShot[12];
+                    break;
+                case 8:
+                    sr.flipX = false;
+                    sr.sprite = tripleShot[13];
+                    break;
+                case 9:
+                    sr.flipX = true;
+                    sr.sprite = tripleShot[13];
+                    break;
+                case 10:
+                    sr.flipX = true;
+                    sr.sprite = tripleShot[12];
+                    break;
+                case 11:
+                    sr.flipX = true;
+                    sr.sprite = tripleShot[11];
+                    break;
+                case 12:
+                    sr.flipX = true;
+                    sr.sprite = tripleShot[5];
+                    break;
+                case 13:
+                    sr.flipX = true;
+                    sr.sprite = tripleShot[4];
+                    break;
+                case 14:
+                    sr.flipX = true;
+                    sr.sprite = tripleShot[3];
+                    break;
+                case 15:
+                    sr.flipX = true;
+                    sr.sprite = tripleShot[2];
+                    break;
+                case 16:
+                    sr.flipX = true;
+                    sr.sprite = tripleShot[1];
+                    break;
+                case 17:
+                    sr.flipX = true;
+                    sr.sprite = tripleShot[0];
+                    break;
+                case 18:
+                    sr.flipX = true;
+                    sr.sprite = tripleShot[7];//look down left
+                    break;
+                case 19:
+                    sr.flipX = true;
+                    sr.sprite = tripleShot[6];
+                    break;
+                case 20:
+                    sr.flipX = true;
+                    sr.sprite = tripleShot[8];
+                    break;
+                case 21:
+                    sr.flipX = true;
+                    sr.sprite = tripleShot[9];//swing down around
+                    break;
+                case 22:
+                    sr.flipX = true;
+                    sr.sprite = tripleShot[10];
+                    break;
+                case 23:
+                    sr.flipX = false;
+                    sr.sprite = tripleShot[10];
+                    break;
+                case 24:
+                    sr.flipX = false;
+                    sr.sprite = tripleShot[10];
+                    break;
+                case 25:
+                    sr.flipX = false;
+                    sr.sprite = tripleShot[8];
+                    break;
+                case 26:
+                    sr.flipX = false;
+                    sr.sprite = tripleShot[7];
+                    break;
+                case 27:
+                    sr.flipX = false;
+                    sr.sprite = tripleShot[6];
+                    break;
+                case 28:
+                    sr.flipX = false;
+                    sr.sprite = tripleShot[0];
+                    break;
+                default:
+                    sr.flipX = false;
+                    sr.sprite = tripleShot[0];
                     break;
             }
         }//iceray
