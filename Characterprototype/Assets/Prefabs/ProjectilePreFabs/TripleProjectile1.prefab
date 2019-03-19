@@ -96,6 +96,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  trip2: {fileID: 0}
+  trip3: {fileID: 0}
   power: 30
 --- !u!50 &6438623360107899366
 Rigidbody2D:
