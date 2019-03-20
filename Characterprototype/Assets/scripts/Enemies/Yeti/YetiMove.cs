@@ -60,6 +60,7 @@ public class YetiMove : EnemyMove
                 }
                 else
                 {
+                    anim.SetBool("IsPunching", true);
                     Debug.Log("Check");
                     StartCoroutine(GetComponent<YetiAttack>().Attack());
                 }

@@ -20,9 +20,9 @@ public class YetiAttack : MonoBehaviour
 
     public IEnumerator Attack()
     {
-        hitBox.GetComponent<BoxCollider2D>().enabled = true;
+       //hitBox.GetComponent<BoxCollider2D>().enabled = true;
         Debug.Log("Attack");
         yield return new WaitForSeconds(2);
-        hitBox.GetComponent<BoxCollider2D>().enabled = false;
+        //hitBox.GetComponent<BoxCollider2D>().enabled = false;
     }
 }
