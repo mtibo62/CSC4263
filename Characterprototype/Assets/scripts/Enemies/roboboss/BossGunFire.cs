@@ -52,6 +52,7 @@ public class BossGunFire : MonoBehaviour, ISetTarget
                 if (timeToFire <= 0)
                 {
                     GameObject proj = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
+                    
                     timeToFire = time;
                 }
             }

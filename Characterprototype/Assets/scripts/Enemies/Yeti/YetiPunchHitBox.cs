@@ -26,7 +26,7 @@ public class YetiPunchHitBox : MonoBehaviour
         if (obj != null)
         {
             obj.TakeDamage(2);
-            GetComponent<BoxCollider2D>().enabled = false;
+            //GetComponent<BoxCollider2D>().enabled = false;
             Debug.Log("Punch");
         }
     }

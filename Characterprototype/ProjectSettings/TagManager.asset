@@ -12,6 +12,7 @@ TagManager:
   - BossBullet
   - iceshot
   - grenade
+  - plant
   layers:
   - Default
   - TransparentFX
