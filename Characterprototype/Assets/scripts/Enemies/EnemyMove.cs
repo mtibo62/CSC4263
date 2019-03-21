@@ -5,7 +5,7 @@ using UnityEditor.Animations;
 
 public class EnemyMove : MonoBehaviour, ISetTarget
 {
-
+    
     public GameObject target;
     // Start is called before the first frame update
     void Start()

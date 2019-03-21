@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 227906665291659157}
   - component: {fileID: 131535425431983328}
   - component: {fileID: 781388934787139657}
+  - component: {fileID: 3792431989761719451}
   - component: {fileID: 8612824302732077094}
   - component: {fileID: 1332896428454968513}
   m_Layer: 8
@@ -120,6 +121,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &3792431989761719451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3155314784306927360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f83d699baa726342b712312f8ca1592, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8612824302732077094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,6 +145,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 268e44f5c32a083438d0d4e3d4cb53f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anima: {fileID: 0}
+  Inventory: {fileID: 0}
+  velocity: {x: 0, y: 0}
+  weaponType: 0
 --- !u!114 &1332896428454968513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,4 +162,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  trip2: {fileID: 0}
+  trip3: {fileID: 0}
   power: 5

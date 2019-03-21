@@ -37,25 +37,25 @@ public class EnemyDamage : MonoBehaviour
     void Update()
     {
 
-        /*
-        if (health <= 6)
-            sr.sprite = sprites[0];
-        if (health <= 4)
-            sr.sprite = sprites[1];
-        if (health <= 2)
-            sr.sprite = sprites[2];
+
+        //if (health <= 6)
+        //    sr.sprite = sprites[0];
+        //if (health <= 4)
+        //    sr.sprite = sprites[1];
+        //if (health <= 2)
+        //    sr.sprite = sprites[2];
         if (health <= 0)
         {
             if (scored == 0)
                 gm.GetComponent<GameManager>().score += 25;
             scored++;
-            sr.sprite = sprites[3];
+            //sr.sprite = sprites[3];
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
             rb.AddForce(new Vector2(0, 5));
         }
-        if (gameObject.transform.position.y < -8)
-            Destroy(gameObject);
-        */
+        //if (gameObject.transform.position.y < -8)
+        //    Destroy(gameObject);
+
     }
 
 }
