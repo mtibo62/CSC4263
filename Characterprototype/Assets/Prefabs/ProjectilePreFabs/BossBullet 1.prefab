@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4787874402383339876}
   - component: {fileID: 1952393378160150253}
   - component: {fileID: 5682783245511229523}
+  - component: {fileID: 7322389713832198677}
   - component: {fileID: 3814774475618951999}
   - component: {fileID: 4149889128046287874}
   m_Layer: 11
@@ -97,6 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anima: {fileID: 6361234794896090986, guid: cfa5e4b9cdd3b8c4d9fa8d8fc2dee88b, type: 3}
   Inventory: {fileID: 0}
+  velocity: {x: 0, y: 0}
   weaponType: 15
 --- !u!70 &5682783245511229523
 CapsuleCollider2D:
@@ -114,6 +116,20 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 10.099999, y: 10.0199995}
   m_Direction: 0
+--- !u!114 &7322389713832198677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5660459597971913053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06653cbce545cd54f891f5af0cfc073c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anima: {fileID: 0}
+  velocity: {x: -7, y: 0}
 --- !u!50 &3814774475618951999
 Rigidbody2D:
   serializedVersion: 4
@@ -142,10 +158,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5660459597971913053}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 12eea481c7ff03542be1351b35f6db37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 988342436, guid: 35d08707e09df3f479f55f37c4e5a4d5, type: 3}
+  trip2: {fileID: 0}
+  trip3: {fileID: 0}
   power: 20
