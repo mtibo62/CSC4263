@@ -32,14 +32,14 @@ public class YetiMove : EnemyMove
             Move();
             if (!anim.GetBool("IsWalking"))
             {
-                anim.SetBool("IsWalking", true);
+                //anim.SetBool("IsWalking", true);
             }
         }
         else
         {
             if (anim.GetBool("IsWalking"))
             {
-                anim.SetBool("IsWalking", false);
+                //anim.SetBool("IsWalking", false);
             }
         }
     }
@@ -60,7 +60,7 @@ public class YetiMove : EnemyMove
                 }
                 else
                 {
-                    anim.SetBool("IsPunching", true);
+                    //anim.SetBool("IsPunching", true);
                     Debug.Log("Check");
                     StartCoroutine(GetComponent<YetiAttack>().Attack());
                 }
