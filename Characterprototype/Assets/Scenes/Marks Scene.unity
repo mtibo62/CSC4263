@@ -275,10 +275,10 @@ Transform:
   m_LocalPosition: {x: 0.35858905, y: 0.6986006, z: -5.328213}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 286321759}
   - {fileID: 757176102}
   - {fileID: 614380094}
   - {fileID: 1368404644}
-  - {fileID: 286321759}
   - {fileID: 2111627534}
   - {fileID: 1363609408}
   m_Father: {fileID: 0}
@@ -1874,7 +1874,7 @@ PrefabInstance:
     - target: {fileID: 2548952209859309130, guid: 98615e5cf136a52469f581ed9d0c829e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2548952209859309130, guid: 98615e5cf136a52469f581ed9d0c829e,
         type: 3}
@@ -2023,6 +2023,12 @@ PrefabInstance:
       objectReference: {fileID: 350077239}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93a2775d72e308b4ca7863e016c9f2f7, type: 3}
+--- !u!1 &566100037 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7489717954863560790, guid: 063c30b1f14a8ee4d97a227251e2b61a,
+    type: 3}
+  m_PrefabInstance: {fileID: 7489717955179911516}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &589793431
 GameObject:
   m_ObjectHideFlags: 3
@@ -2162,7 +2168,7 @@ PrefabInstance:
     - target: {fileID: 6977329375462681804, guid: 5f0336ebabd3f1a48a4ba887046e366a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6977329375462681804, guid: 5f0336ebabd3f1a48a4ba887046e366a,
         type: 3}
@@ -2541,6 +2547,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 551009778, guid: 5f946a24119edfd48a982e9cb777c483, type: 3}
+      propertyPath: weapons.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 551009778, guid: 5f946a24119edfd48a982e9cb777c483, type: 3}
+      propertyPath: weapons.Array.data[3]
+      value: 
+      objectReference: {fileID: 955239720}
+    - target: {fileID: 551009778, guid: 5f946a24119edfd48a982e9cb777c483, type: 3}
+      propertyPath: weapons.Array.data[4]
+      value: 
+      objectReference: {fileID: 1889453037}
+    - target: {fileID: 551009778, guid: 5f946a24119edfd48a982e9cb777c483, type: 3}
+      propertyPath: weapons.Array.data[5]
+      value: 
+      objectReference: {fileID: 566100037}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f946a24119edfd48a982e9cb777c483, type: 3}
 --- !u!4 &711966534 stripped
@@ -3040,6 +3062,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10fcf8a861f4ff84cac843a64736f17e, type: 3}
+--- !u!1 &955239720 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5740723982549519843, guid: 8057f3417d1622a4381424ee9eed99da,
+    type: 3}
+  m_PrefabInstance: {fileID: 5740723982060985025}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &972591735 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7753209370745283909, guid: 060a88b69d3e4f54dbbeeb0db12956bd,
@@ -5158,6 +5186,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecd6118c021309f44a5e44dea2d9269b, type: 3}
+--- !u!1 &1889453037 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3851485687398162789, guid: 1757655d27dff77448dc2328b47af4fe,
+    type: 3}
+  m_PrefabInstance: {fileID: 3851485688215725657}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1912233438
 GameObject:
   m_ObjectHideFlags: 0
@@ -5747,7 +5781,7 @@ PrefabInstance:
     - target: {fileID: 7473656260674802946, guid: c9ce6cbafe1376649aad26e6380c9cb3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7473656260674802946, guid: c9ce6cbafe1376649aad26e6380c9cb3,
         type: 3}
@@ -6179,7 +6213,7 @@ PrefabInstance:
     - target: {fileID: 5740723982549519847, guid: 8057f3417d1622a4381424ee9eed99da,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5740723982549519847, guid: 8057f3417d1622a4381424ee9eed99da,
         type: 3}
