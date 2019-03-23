@@ -1459,6 +1459,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5851676937380116379, guid: 8abfc6d0ccd5d6d4bb89dc0f69ce6679,
         type: 3}
+    - target: {fileID: 8565488726754323040, guid: 35d08707e09df3f479f55f37c4e5a4d5,
+        type: 3}
+      propertyPath: tripPrefab
+      value: 
+      objectReference: {fileID: 7684335666586036595, guid: 3575568888febc64d9c6e302b573cd13,
+        type: 3}
     - target: {fileID: 8565488725555856243, guid: 35d08707e09df3f479f55f37c4e5a4d5,
         type: 3}
       propertyPath: m_SortingOrder
@@ -3744,7 +3750,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 8e2ab203c5f23c94cb4fd2546d839e5d, type: 3}
+      objectReference: {fileID: 8300000, guid: 4f93604b2471024429421f24bb5bc38f, type: 3}
     - target: {fileID: 5539419580375021993, guid: 9c201bf78acdef34fb6fb6634847720e,
         type: 3}
       propertyPath: Loop
@@ -5488,7 +5494,7 @@ PrefabInstance:
     - target: {fileID: 4127960180516036292, guid: ee2873eef654649479a53069890862a3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.2
+      value: -3.9
       objectReference: {fileID: 0}
     - target: {fileID: 4127960180516036292, guid: ee2873eef654649479a53069890862a3,
         type: 3}
@@ -5508,7 +5514,7 @@ PrefabInstance:
     - target: {fileID: 4127960180516036292, guid: ee2873eef654649479a53069890862a3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 36.69
+      value: 12.89
       objectReference: {fileID: 0}
     - target: {fileID: 4127960180516036292, guid: ee2873eef654649479a53069890862a3,
         type: 3}
@@ -5975,12 +5981,12 @@ PrefabInstance:
     - target: {fileID: 596917892458055755, guid: 705e0e651587214428f2a5c06a695112,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 61.32141
+      value: 26.03
       objectReference: {fileID: 0}
     - target: {fileID: 596917892458055755, guid: 705e0e651587214428f2a5c06a695112,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.0986006
+      value: -3.57
       objectReference: {fileID: 0}
     - target: {fileID: 596917892458055755, guid: 705e0e651587214428f2a5c06a695112,
         type: 3}
@@ -6297,6 +6303,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TripleShot
+      objectReference: {fileID: 0}
+    - target: {fileID: 7489717954863560790, guid: 063c30b1f14a8ee4d97a227251e2b61a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7489717954863560786, guid: 063c30b1f14a8ee4d97a227251e2b61a,
         type: 3}
