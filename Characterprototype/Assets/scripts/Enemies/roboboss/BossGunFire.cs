@@ -16,6 +16,7 @@ public class BossGunFire : MonoBehaviour, ISetTarget
     private Vector2 PlayerPos; //position of the mouse pointer
     private Vector2 RelPos; //position of pointer relative to object
 
+    private Vector2 moveDirection;
     private float angle; //degrees 
     private float time;
     private bool triggered;
@@ -52,7 +53,8 @@ public class BossGunFire : MonoBehaviour, ISetTarget
                 if (timeToFire <= 0)
                 {
                     GameObject proj = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
-                    
+                    moveDirection = (RelPos).normalized * 10;       
+                    proj.GetComponent<Rigidbody2D>().velocity = new Vector2(moveDirection.x, moveDirection.y);
                     timeToFire = time;
                 }
             }

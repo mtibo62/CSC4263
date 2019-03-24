@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class YetiAttack : MonoBehaviour
 {
+    public Animator anim;
 
     public GameObject hitBox;
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -20,9 +21,12 @@ public class YetiAttack : MonoBehaviour
 
     public IEnumerator Attack()
     {
-       //hitBox.GetComponent<BoxCollider2D>().enabled = true;
+        yield return new WaitForSeconds(1);
+        hitBox.GetComponent<BoxCollider2D>().enabled = true;
+
         Debug.Log("Attack");
-        yield return new WaitForSeconds(2);
-        //hitBox.GetComponent<BoxCollider2D>().enabled = false;
+        yield return new WaitForSeconds(1);
+        hitBox.GetComponent<BoxCollider2D>().enabled = false;
+        anim.SetBool("IsPunching", false);
     }
 }

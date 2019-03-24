@@ -32,14 +32,14 @@ public class YetiMove : EnemyMove
             Move();
             if (!anim.GetBool("IsWalking"))
             {
-                //anim.SetBool("IsWalking", true);
+                anim.SetBool("IsWalking", true);
             }
         }
         else
         {
             if (anim.GetBool("IsWalking"))
             {
-                //anim.SetBool("IsWalking", false);
+                anim.SetBool("IsWalking", false);
             }
         }
     }
@@ -52,17 +52,18 @@ public class YetiMove : EnemyMove
             float xdir = target.transform.position.x - rb.transform.position.x;
             float ydir = target.transform.position.y - rb.transform.position.y;
 
-            if (GetComponent<EnemyDamage>().health > 0)
+            if (GetComponent<EnemyDamage>().health > 0 && !anim.GetBool("IsPunching"))
             {
-                if (Mathf.Abs(xdir) > 2.2)
+                if (xdir > 2.2 || xdir < -4)
                 {
                     rb.transform.position += (target.transform.position - rb.transform.position).normalized * moveSpeed * Time.deltaTime;
                 }
                 else
                 {
-                    //anim.SetBool("IsPunching", true);
+                    anim.SetBool("IsPunching", true);
                     Debug.Log("Check");
                     StartCoroutine(GetComponent<YetiAttack>().Attack());
+                    
                 }
             }
                 
