@@ -128,8 +128,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06653cbce545cd54f891f5af0cfc073c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anima: {fileID: 0}
-  velocity: {x: -7, y: 0}
 --- !u!50 &3814774475618951999
 Rigidbody2D:
   serializedVersion: 4
@@ -139,7 +137,7 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5660459597971913053}
   m_BodyType: 0
-  m_Simulated: 1
+  m_Simulated: 0
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 0.002377283

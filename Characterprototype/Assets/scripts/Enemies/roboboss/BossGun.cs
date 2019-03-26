@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossGun : MonoBehaviour
+public class BossGun : EnemyMove
 {
     public Sprite[] sprites; //sprites to animate
     public GameObject obj;
-    public GameObject Player;
+    
 
     private SpriteRenderer sr;
 
@@ -24,10 +24,19 @@ public class BossGun : MonoBehaviour
 
 
     // Update is called once per frame
-    void FixedUpdate()
+    private void FixedUpdate()
+    {
+        if(target != null)
+        {
+            Move();
+        }
+    }
+
+
+    void Move()
     {
         ObjPos = obj.transform.position;
-        PlayerPos = Player.transform.position;
+        PlayerPos = target.transform.position;
         RelPos = PlayerPos - ObjPos;
 
         angle = Mathf.Atan2(RelPos.x, RelPos.y);

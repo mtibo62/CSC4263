@@ -5,19 +5,20 @@ using UnityEngine;
 public class bossBullet : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject anima;
-    private Rigidbody2D rb;
-    public Vector2 velocity;
-    private float timer;
-    private GameObject anim;
+    float moveSpeed = 7f;
+
+    Rigidbody2D rb;
+
+    PlayerDamage target;
+    Vector2 moveDirection;
 
 
     // Use this for initialization
     void Start()
     {
-        Destroy(this.gameObject, 10);
+        
+        Destroy(this.gameObject, 6f);
         rb = GetComponent<Rigidbody2D>();
-         rb.velocity = velocity;
 
     }
 

@@ -6,36 +6,64 @@ public class EvilFlowerAttack : EnemyMove
 {
     [HideInInspector]
     public Rigidbody2D rb;
-
-    public int moveSpeed;
    
-
     public float localScaleSetNum;
+
+    public Animator anim;
+
+    public GameObject hitBox;
+
+    bool isAttacking;
 
     // Start is called before the first frame update
     void Start()
     {
         localScaleSetNum = transform.localScale.x;
-        
+        hitBox.GetComponent<BoxCollider2D>().enabled = false;
         rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Move();
-        Attack();
+        if (target != null)
+        {
+            Follow();
+            AttackCheck();
+        }
+
+
     }
 
-    public void Attack()
+    public void AttackCheck()
     {
+        float xdir = target.transform.position.x - rb.transform.position.x;
+        float ydir = target.transform.position.y - rb.transform.position.y;
 
+        if ((xdir > .5 || xdir < -1) && isAttacking == false)
+        {
+            //anim.SetBool("IsPunching", true);
+            Debug.Log("Check");
+            StartCoroutine(Attack());
+            isAttacking = true;
+        }
     }
 
-
-    public void Move()
+    IEnumerator Attack()
     {
-        if (target.transform.position.x > rb.transform.localScale.x)
+        yield return new WaitForSeconds(1);
+        hitBox.GetComponent<BoxCollider2D>().enabled = true;
+
+        Debug.Log("Attack");
+        yield return new WaitForSeconds(1);
+        hitBox.GetComponent<BoxCollider2D>().enabled = false;
+        isAttacking = false;
+        //anim.SetBool("IsPunching", false);
+    }
+
+    public void Follow()
+    {
+        if (target.transform.position.x > rb.transform.position.x)
         {
             transform.localScale = new Vector3(-localScaleSetNum, transform.localScale.y, 0);
         }
