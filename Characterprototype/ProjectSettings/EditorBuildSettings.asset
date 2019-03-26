@@ -15,6 +15,12 @@ EditorBuildSettings:
     path: Assets/Scenes/level01.unity
     guid: 20241691af1a46b46ab62f167569074b
   - enabled: 1
+    path: Assets/Scenes/StartMenu.unity
+    guid: 62298b78f816c824084feb29621735a6
+  - enabled: 1
+    path: Assets/Scenes/Help.unity
+    guid: 3d54de148a8d48847a8b79d2fa5e6098
+  - enabled: 1
     path: Assets/Scenes/Marks Scene.unity
     guid: 68453389a404f3241bd075b77588b218
   m_configObjects: {}

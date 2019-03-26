@@ -1,10 +1,8 @@
-<<<<<<< HEAD
+
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-=======
-﻿using UnityEngine;
->>>>>>> a6912dc9c0f5c80bf94da0d576b02eda83f4bf89
+
 
 
 public class flameShoot : MonoBehaviour, ISetTarget
