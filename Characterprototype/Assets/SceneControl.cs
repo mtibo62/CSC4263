@@ -19,7 +19,12 @@ public class SceneControl : MonoBehaviour
     }
     public void Die()
     {
-        //implement
+        SceneManager.LoadScene("Death");
+    }
+    public void PlayAgain()
+    {
+        string level = PlayerPrefs.GetString("Level");
+        SceneManager.LoadScene(level);
     }
     public void StartMenu()
     {

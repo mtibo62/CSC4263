@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerDamage : MonoBehaviour, IDamageable
 {
     public GameObject gm;
     public Sprite[] sprites;
-    public GameObject healthBar;
     public GameObject[] bodyParts;
     public GameObject damage;
     public Text healthText;
@@ -23,7 +23,7 @@ public class PlayerDamage : MonoBehaviour, IDamageable
     // Start is called before the first frame update
     void Start()
     {
-        sr = healthBar.GetComponent<SpriteRenderer>();
+      
     }
 
     private void OnCollisionEnter2D(Collision2D col)
@@ -59,40 +59,12 @@ public class PlayerDamage : MonoBehaviour, IDamageable
             canTakeDamage = true;
 
         healthText.text = health.ToString();
-       /* if (health == 10)
-        {
-            sr.enabled = false;
-            healthText.color = new Color(73, 172, 50);
-        }
-        if (health <= 9)
-        {
-            sr.sprite = sprites[0];
-            sr.enabled = true;
-        }
-        if (health <= 8)
-            sr.sprite = sprites[1];
-        if (health <= 7)
-            sr.sprite = sprites[1];
-        if (health <= 6)
-        {
-            sr.sprite = sprites[2];
-            healthText.color = new Color(255, 255, 102);
-        }
-        if (health <= 5)
-            sr.sprite = sprites[3];
-        if (health <= 4)
-            sr.sprite = sprites[4];
-        if (health <= 3)
-            sr.sprite = sprites[5];
-        healthText.color = new Color(255, 76, 76);
-        if (health <= 2)
-            sr.sprite = sprites[6]; */
+      
         if (health <= 0)
         {
-            //sr.sprite = sprites[7];
             transform.DetachChildren();
-            Destroy(gameObject);
             Explode();
+            Destroy(gameObject);
         }
     }
     private void Explode()
@@ -114,6 +86,10 @@ public class PlayerDamage : MonoBehaviour, IDamageable
         rb1.velocity = new Vector2(6f, 8f);
         rb3.velocity = new Vector2(-8f, 4f);
         rb4.velocity = new Vector2(7f, 9f);
+        //save the score and current level.
+        PlayerPrefs.SetFloat("Score", gm.GetComponent<GameManager>().score);
+        PlayerPrefs.SetString("Level", SceneManager.GetActiveScene().name);
+        PlayerPrefs.Save();
         gm.GetComponent<GameManager>().isAlive = false;
     }
 }

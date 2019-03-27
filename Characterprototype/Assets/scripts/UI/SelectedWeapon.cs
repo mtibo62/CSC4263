@@ -24,7 +24,7 @@ public class SelectedWeapon : MonoBehaviour
         weaponType = inv.GetComponent<Inventory>().weaponType;
         switch (weaponType)
         {
-            /*case 0:
+            case 0:
                 sr.enabled = false;
                 break;
             case 1:
@@ -50,7 +50,7 @@ public class SelectedWeapon : MonoBehaviour
             case 6:
                 sr.enabled = true;
                 gameObject.transform.position = weapons[5].transform.position;
-                break; */
+                break; 
         }
     }
 }
