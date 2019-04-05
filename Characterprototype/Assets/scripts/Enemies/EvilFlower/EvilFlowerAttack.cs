@@ -42,23 +42,27 @@ public class EvilFlowerAttack : EnemyMove
 
         if ((xdir > .5 || xdir < -1) && isAttacking == false)
         {
-            //anim.SetBool("IsPunching", true);
+            anim.SetBool("IsAttacking", true);
             Debug.Log("Check");
             StartCoroutine(Attack());
             isAttacking = true;
+        }
+        else
+        {
+
         }
     }
 
     IEnumerator Attack()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(1f);
         hitBox.GetComponent<BoxCollider2D>().enabled = true;
 
         Debug.Log("Attack");
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(.2f);
         hitBox.GetComponent<BoxCollider2D>().enabled = false;
         isAttacking = false;
-        //anim.SetBool("IsPunching", false);
+        anim.SetBool("IsAttacking", false);
     }
 
     public void Follow()
