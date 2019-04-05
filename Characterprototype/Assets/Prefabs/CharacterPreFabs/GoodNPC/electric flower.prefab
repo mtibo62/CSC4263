@@ -1,0 +1,186 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3028466627281764891
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2627857157646412239, guid: b12345e5d37723f449a5e5ca0bb8834d,
+        type: 3}
+      propertyPath: m_Name
+      value: electric flower
+      objectReference: {fileID: 0}
+    - target: {fileID: 2627857157646412235, guid: b12345e5d37723f449a5e5ca0bb8834d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2627857157646412235, guid: b12345e5d37723f449a5e5ca0bb8834d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2627857157646412235, guid: b12345e5d37723f449a5e5ca0bb8834d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2627857157646412235, guid: b12345e5d37723f449a5e5ca0bb8834d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2627857157646412235, guid: b12345e5d37723f449a5e5ca0bb8834d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2627857157646412235, guid: b12345e5d37723f449a5e5ca0bb8834d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2627857157646412235, guid: b12345e5d37723f449a5e5ca0bb8834d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2627857157646412235, guid: b12345e5d37723f449a5e5ca0bb8834d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2627857157646412235, guid: b12345e5d37723f449a5e5ca0bb8834d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2627857157646412235, guid: b12345e5d37723f449a5e5ca0bb8834d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2627857157646412235, guid: b12345e5d37723f449a5e5ca0bb8834d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2627857157646412234, guid: b12345e5d37723f449a5e5ca0bb8834d,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: eab10faf44bf35f4099c55f2572f8c78,
+        type: 3}
+    - target: {fileID: 2627857157646412232, guid: b12345e5d37723f449a5e5ca0bb8834d,
+        type: 3}
+      propertyPath: flowers.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: eab10faf44bf35f4099c55f2572f8c78,
+        type: 3}
+    - target: {fileID: 2627857157646412232, guid: b12345e5d37723f449a5e5ca0bb8834d,
+        type: 3}
+      propertyPath: flowers.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300002, guid: eab10faf44bf35f4099c55f2572f8c78,
+        type: 3}
+    - target: {fileID: 2627857157646412232, guid: b12345e5d37723f449a5e5ca0bb8834d,
+        type: 3}
+      propertyPath: flowers.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300004, guid: eab10faf44bf35f4099c55f2572f8c78,
+        type: 3}
+    - target: {fileID: 2627857157646412232, guid: b12345e5d37723f449a5e5ca0bb8834d,
+        type: 3}
+      propertyPath: flowers.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300006, guid: eab10faf44bf35f4099c55f2572f8c78,
+        type: 3}
+    - target: {fileID: 2627857157646412232, guid: b12345e5d37723f449a5e5ca0bb8834d,
+        type: 3}
+      propertyPath: flowers.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300010, guid: eab10faf44bf35f4099c55f2572f8c78,
+        type: 3}
+    - target: {fileID: 2627857157646412232, guid: b12345e5d37723f449a5e5ca0bb8834d,
+        type: 3}
+      propertyPath: flowers.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300012, guid: eab10faf44bf35f4099c55f2572f8c78,
+        type: 3}
+    - target: {fileID: 2627857157646412232, guid: b12345e5d37723f449a5e5ca0bb8834d,
+        type: 3}
+      propertyPath: flowers.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300014, guid: eab10faf44bf35f4099c55f2572f8c78,
+        type: 3}
+    - target: {fileID: 2627857157646412232, guid: b12345e5d37723f449a5e5ca0bb8834d,
+        type: 3}
+      propertyPath: flowers.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300016, guid: eab10faf44bf35f4099c55f2572f8c78,
+        type: 3}
+    - target: {fileID: 2627857157646412232, guid: b12345e5d37723f449a5e5ca0bb8834d,
+        type: 3}
+      propertyPath: flowers.Array.data[8]
+      value: 
+      objectReference: {fileID: 21300018, guid: eab10faf44bf35f4099c55f2572f8c78,
+        type: 3}
+    - target: {fileID: 2627857157646412232, guid: b12345e5d37723f449a5e5ca0bb8834d,
+        type: 3}
+      propertyPath: flowers.Array.data[9]
+      value: 
+      objectReference: {fileID: 21300020, guid: eab10faf44bf35f4099c55f2572f8c78,
+        type: 3}
+    - target: {fileID: 2627857157646412232, guid: b12345e5d37723f449a5e5ca0bb8834d,
+        type: 3}
+      propertyPath: animate.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300020, guid: eab10faf44bf35f4099c55f2572f8c78,
+        type: 3}
+    - target: {fileID: 2627857157646412232, guid: b12345e5d37723f449a5e5ca0bb8834d,
+        type: 3}
+      propertyPath: animate.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300022, guid: eab10faf44bf35f4099c55f2572f8c78,
+        type: 3}
+    - target: {fileID: 2627857157646412232, guid: b12345e5d37723f449a5e5ca0bb8834d,
+        type: 3}
+      propertyPath: animate.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300024, guid: eab10faf44bf35f4099c55f2572f8c78,
+        type: 3}
+    - target: {fileID: 2627857157646412232, guid: b12345e5d37723f449a5e5ca0bb8834d,
+        type: 3}
+      propertyPath: animate.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300008, guid: eab10faf44bf35f4099c55f2572f8c78,
+        type: 3}
+    - target: {fileID: 2627857157646412232, guid: b12345e5d37723f449a5e5ca0bb8834d,
+        type: 3}
+      propertyPath: animate.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300008, guid: eab10faf44bf35f4099c55f2572f8c78,
+        type: 3}
+    - target: {fileID: 2627857157646412232, guid: b12345e5d37723f449a5e5ca0bb8834d,
+        type: 3}
+      propertyPath: animate.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300024, guid: eab10faf44bf35f4099c55f2572f8c78,
+        type: 3}
+    - target: {fileID: 2627857157646412232, guid: b12345e5d37723f449a5e5ca0bb8834d,
+        type: 3}
+      propertyPath: animate.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300022, guid: eab10faf44bf35f4099c55f2572f8c78,
+        type: 3}
+    - target: {fileID: 2627857157646412232, guid: b12345e5d37723f449a5e5ca0bb8834d,
+        type: 3}
+      propertyPath: animate.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300020, guid: eab10faf44bf35f4099c55f2572f8c78,
+        type: 3}
+    m_RemovedComponents:
+    - {fileID: 2456253969747253970, guid: b12345e5d37723f449a5e5ca0bb8834d, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: b12345e5d37723f449a5e5ca0bb8834d, type: 3}
