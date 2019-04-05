@@ -12,6 +12,8 @@ public class FireWeapon : MonoBehaviour
     public GameObject grenadePrefab;
     public GameObject boltPrefab;
     public GameObject tripPrefab;
+    public GameObject tripPrefab1;
+    public GameObject tripPrefab2;
     public GameObject obj;
     public GameObject inventory;
 
@@ -91,6 +93,8 @@ public class FireWeapon : MonoBehaviour
                                 break;
                             case 6:
                                 GameObject trip1 = Instantiate(tripPrefab, transform.position, Quaternion.identity) as GameObject;
+                                GameObject trip2 = Instantiate(tripPrefab1, transform.position, Quaternion.identity) as GameObject;
+                                GameObject trip3 = Instantiate(tripPrefab2, transform.position, Quaternion.identity) as GameObject;
                                 trip1.GetComponent<BulletCollision>().weaponType = weaponType;
                                 soundFx.clip = BoltFX;
                                 soundFx.Play();

@@ -6169,6 +6169,18 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 1047878280}
+    - target: {fileID: 3527293839246912805, guid: 35d08707e09df3f479f55f37c4e5a4d5,
+        type: 3}
+      propertyPath: tripPrefab1
+      value: 
+      objectReference: {fileID: 7485046524201647666, guid: aa661b1411f7e594eba0ca02837f4b6a,
+        type: 3}
+    - target: {fileID: 3527293839246912805, guid: 35d08707e09df3f479f55f37c4e5a4d5,
+        type: 3}
+      propertyPath: tripPrefab2
+      value: 
+      objectReference: {fileID: 5851676937380116379, guid: 8abfc6d0ccd5d6d4bb89dc0f69ce6679,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35d08707e09df3f479f55f37c4e5a4d5, type: 3}
 --- !u!1001 &3851485688215725657
