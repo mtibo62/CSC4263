@@ -11,7 +11,7 @@ public class PlayerDamage : MonoBehaviour, IDamageable
     public GameObject[] bodyParts;
     public GameObject damage;
     public Text healthText;
-    public int health = 10;
+    public int health;
 
     System.Random rand = new System.Random();
 
@@ -62,9 +62,7 @@ public class PlayerDamage : MonoBehaviour, IDamageable
       
         if (health <= 0)
         {
-            transform.DetachChildren();
             Explode();
-            Destroy(gameObject);
         }
     }
     private void Explode()
@@ -91,5 +89,6 @@ public class PlayerDamage : MonoBehaviour, IDamageable
         PlayerPrefs.SetString("Level", SceneManager.GetActiveScene().name);
         PlayerPrefs.Save();
         gm.GetComponent<GameManager>().isAlive = false;
+        Destroy(gameObject);
     }
 }

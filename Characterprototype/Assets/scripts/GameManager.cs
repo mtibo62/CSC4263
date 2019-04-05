@@ -20,14 +20,18 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Cursor.visible = false;
-        numLevelAssets = plants.Count + enemies.Count; 
+        numLevelAssets = plants.Count + enemies.Count;
+        isAlive = true;
     }
 
     // Update is called once per frame
     void Update()
     {
         if (!isAlive)
+        {
+            Cursor.visible = true;
             sc.GetComponent<SceneControl>().Die();
+        }
 
         progress = (((plants.Count + enemies.Count) / numLevelAssets) * 100);
         levelProgress.text = progress.ToString();
