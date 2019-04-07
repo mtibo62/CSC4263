@@ -136,6 +136,7 @@
     <Compile Include="Assets\scripts\Enemies\roboboss\BossGunFire.cs" />
     <Compile Include="Assets\scripts\Enemies\roboboss\bossShoot.cs" />
     <Compile Include="Assets\scripts\Enemies\roboboss\BossTrigger.cs" />
+    <Compile Include="Assets\scripts\Enemies\Snowman\SnowmanMove.cs" />
     <Compile Include="Assets\scripts\Enemies\Yeti\YetiAttack.cs" />
     <Compile Include="Assets\scripts\Enemies\Yeti\YetiMove.cs" />
     <Compile Include="Assets\scripts\Enemies\Yeti\YetiPunchHitBox.cs" />
