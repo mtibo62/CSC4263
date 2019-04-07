@@ -27,7 +27,7 @@ public class PickUpWeapon : MonoBehaviour
     // Update is called once per frame
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Player")
+        if (col.gameObject.tag == "Player" && GetComponent<SpriteRenderer>().enabled)
         {
             instructions.text = "Press E to pick up...";
         }
@@ -37,7 +37,7 @@ public class PickUpWeapon : MonoBehaviour
     {
         if (col.gameObject.tag == "Player")
         {
-            if (Input.GetKey("e"))
+            if (Input.GetKey("e") && GetComponent<SpriteRenderer>().enabled)
             {
                 switch (weaponType)
                 {

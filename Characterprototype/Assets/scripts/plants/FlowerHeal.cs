@@ -5,6 +5,7 @@ using UnityEngine;
 public class FlowerHeal : MonoBehaviour
 {
     public GameObject gm;
+    public GameObject weapon; //ice and lighting flowers only
     public Sprite[] flowers;
     public Sprite[] animate;
 
@@ -64,6 +65,7 @@ public class FlowerHeal : MonoBehaviour
                 sr.sprite = flowers[9];
                 gm.GetComponent<GameManager>().score += 50;
                 GetComponent<IsHealed>().healed = true;
+                weapon.GetComponent<SpriteRenderer>().enabled = true;
                 heal++;
                 break;
             case 10:
