@@ -1589,7 +1589,7 @@ Transform:
   m_GameObject: {fileID: 469504291}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.9778, y: 4.5888667, z: 4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1642429965}
   m_RootOrder: 1
@@ -1620,7 +1620,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 9.980884}
+  m_Offset: {x: 0.12368393, y: 5.692893}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1631,7 +1631,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 44.44, y: 23.714212}
+  m_Size: {x: 28.195103, y: 15.138231}
   m_EdgeRadius: 0
 --- !u!212 &469504295
 SpriteRenderer:
@@ -3067,7 +3067,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1174954899}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.2, y: -0.9, z: 0}
+  m_LocalPosition: {x: 0.67, y: -0.39, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1853791017}
@@ -4269,6 +4269,8 @@ GameObject:
   - component: {fileID: 1642429963}
   - component: {fileID: 1642429962}
   - component: {fileID: 1642429966}
+  - component: {fileID: 1642429967}
+  - component: {fileID: 1642429968}
   m_Layer: 0
   m_Name: Snowman
   m_TagString: Untagged
@@ -4289,18 +4291,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.03429222, y: -0.034295082}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10.24, y: 10.24}
+    oldSize: {x: 1.83, y: 3.38}
     newSize: {x: 10.24, y: 10.24}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10.24, y: 10.24}
+  m_Size: {x: 3.998272, y: 3.449543}
   m_EdgeRadius: 0
 --- !u!50 &1642429963
 Rigidbody2D:
@@ -4360,7 +4362,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 78ded0f870008d04fa63afd1ab33bcb9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 49b1c6306c36bb4488a2af46a3d1133b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4379,8 +4381,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1642429961}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -27.74, y: -3.17, z: -1.2382812}
-  m_LocalScale: {x: 0.15, y: 0.15, z: 0.25}
+  m_LocalPosition: {x: -33.13, y: -2.29, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1853791017}
   - {fileID: 469504292}
@@ -4401,6 +4403,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   rb: {fileID: 0}
+--- !u!114 &1642429967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642429961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1342e3d4af3688f4cbab8368498857cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToFire: 4
+  projectile: {fileID: 1228075072072814432, guid: 03660ebed91ab46469f1e61711b60496,
+    type: 3}
+  obj: {fileID: 1642429961}
+  Player: {fileID: 0}
+  trigger: {fileID: 469504291}
+  target: {fileID: 0}
+  snowballSpawner: {fileID: 1174954899}
+--- !u!114 &1642429968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642429961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06a128ada8ddf4342a23698433ac11a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites: []
+  healthBar: {fileID: 0}
+  gm: {fileID: 0}
+  health: 8
 --- !u!1001 &1656626939
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4851,8 +4889,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1853791016}
   m_LocalRotation: {x: -0, y: -0, z: 0.1719323, w: 0.98510885}
-  m_LocalPosition: {x: 5.23, y: 1.59, z: 0}
-  m_LocalScale: {x: 1.2077214, y: 0.1663853, z: 1.0389}
+  m_LocalPosition: {x: 0.89, y: -0.01, z: -1}
+  m_LocalScale: {x: 0.532, y: 0.517, z: 1}
   m_Children:
   - {fileID: 1174954900}
   m_Father: {fileID: 1642429965}
@@ -4916,7 +4954,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 653a302719c79d94280f917430de8be8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2aaf78668447f1c488830774fc40c488, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

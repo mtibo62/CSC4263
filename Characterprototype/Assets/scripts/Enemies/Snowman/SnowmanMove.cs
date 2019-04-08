@@ -18,13 +18,16 @@ public class SnowmanMove : EnemyMove {
     // Update is called once per frame
     void Update()
     {
-        if (target.transform.position.x > rb.transform.position.x)
+        if (target != null)
         {
-            transform.localScale = new Vector3(localScaleSetNum, transform.localScale.y, 0);
-        }
-        else
-        {
-            transform.localScale = new Vector3(-localScaleSetNum, transform.localScale.y, 0);
+            if (target.transform.position.x > rb.transform.position.x)
+            {
+                transform.localScale = new Vector3(localScaleSetNum, transform.localScale.y, transform.localScale.z);
+            }
+            else
+            {
+                transform.localScale = new Vector3(-localScaleSetNum, transform.localScale.y, transform.localScale.z);
+            }
         }
     }
 }
