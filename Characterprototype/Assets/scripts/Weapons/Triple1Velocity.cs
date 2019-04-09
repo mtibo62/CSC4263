@@ -30,16 +30,12 @@ public class Triple1Velocity : MonoBehaviour
 
         targetPos.y += 1;
         startPos = gameObject.transform.position;
-
         if (x < 0)
-        {
             sr.flipX = true;
-            sr.flipY = true;
-        }
         //this rotates the projectile towards the mouse when fired
         Vector3 pos = Camera.main.WorldToScreenPoint(transform.position);
         Vector3 dir = Input.mousePosition - pos;
-        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        float angle = Mathf.Atan2(dir.y+1, dir.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
 
