@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 268e44f5c32a083438d0d4e3d4cb53f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anima: {fileID: 0}
+  anima: {fileID: 7943597741140170638, guid: f3cf907dd20f7fb44bce2019b457176c, type: 3}
   Inventory: {fileID: 1047878280, guid: 5f946a24119edfd48a982e9cb777c483, type: 3}
   velocity: {x: 0, y: 0}
   weaponType: 0

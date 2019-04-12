@@ -5479,6 +5479,26 @@ PrefabInstance:
       propertyPath: BoltFX
       value: 
       objectReference: {fileID: 8300000, guid: cab64e5625ddc9040bab772ddb5f5aa1, type: 3}
+    - target: {fileID: 3527293839246912805, guid: 35d08707e09df3f479f55f37c4e5a4d5,
+        type: 3}
+      propertyPath: TripFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 51c33771df48b1a4990ff3ba3a416b52, type: 3}
+    - target: {fileID: 3527293839246912805, guid: 35d08707e09df3f479f55f37c4e5a4d5,
+        type: 3}
+      propertyPath: laserFx
+      value: 
+      objectReference: {fileID: 8300000, guid: 4bcc4773aa341bc4587f015d5bb4e20c, type: 3}
+    - target: {fileID: 3527293839246912805, guid: 35d08707e09df3f479f55f37c4e5a4d5,
+        type: 3}
+      propertyPath: IceFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 2ef91934bbf6beb4288388078390f570, type: 3}
+    - target: {fileID: 3527293839246912805, guid: 35d08707e09df3f479f55f37c4e5a4d5,
+        type: 3}
+      propertyPath: SplashFX
+      value: 
+      objectReference: {fileID: 8300000, guid: df48464cf77495445b93351ecea1e295, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35d08707e09df3f479f55f37c4e5a4d5, type: 3}
 --- !u!1001 &3746860921234263083

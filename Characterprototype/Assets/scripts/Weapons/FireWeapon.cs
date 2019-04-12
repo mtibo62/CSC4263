@@ -32,6 +32,7 @@ public class FireWeapon : MonoBehaviour
     public AudioClip IceFX;
     public AudioClip noobTube;
     public AudioClip BoltFX;
+    public AudioClip TripFX;
 
 
     // Start is called before the first frame update
@@ -96,7 +97,7 @@ public class FireWeapon : MonoBehaviour
                                 GameObject trip2 = Instantiate(tripPrefab1, transform.position, Quaternion.identity) as GameObject;
                                 GameObject trip3 = Instantiate(tripPrefab2, transform.position, Quaternion.identity) as GameObject;
                                 trip1.GetComponent<BulletCollision>().weaponType = weaponType;
-                                soundFx.clip = BoltFX;
+                                soundFx.clip = TripFX;
                                 soundFx.Play();
                                 break;
                         }
