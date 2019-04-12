@@ -13,7 +13,10 @@ public class SnowmanThrow : MonoBehaviour, ISetTarget
     public GameObject target;
 
     public GameObject snowballSpawner;
+    public GameObject arm;
+    public GameObject rotateAround;
 
+    private Vector3 zAxis = new Vector3(0, 0, 1);
 
     private Vector2 ObjPos; //position of your object
     private Vector2 PlayerPos; //position of the mouse pointer
@@ -40,6 +43,7 @@ public class SnowmanThrow : MonoBehaviour, ISetTarget
     {
         if (Player != null)
         {
+            rotate();
             ObjPos = obj.transform.position;
             PlayerPos = Player.transform.position;
             RelPos = PlayerPos - ObjPos;
@@ -80,5 +84,10 @@ public class SnowmanThrow : MonoBehaviour, ISetTarget
             return 7;
         else
             return 0;
+    }
+
+    void rotate()
+    {
+        arm.transform.RotateAround(rotateAround.transform.position, zAxis, 150 * Time.deltaTime);
     }
 }
