@@ -41,6 +41,11 @@ public class BulletCollision : MonoBehaviour
                     Destroy(gameObject);
                 }
                 break;
+            case 5:
+                anim = Instantiate(anima, transform.position, Quaternion.identity) as GameObject;
+                Destroy(gameObject);
+                break;
+
             case 15://boss weapon
                 anim = Instantiate(anima, transform.position, Quaternion.identity) as GameObject;
                 Destroy(gameObject);
@@ -49,9 +54,5 @@ public class BulletCollision : MonoBehaviour
                 Destroy(gameObject);
                 break;
         }
-    }
-    private void FixedUpdate()
-    {
-       
     }
 }
