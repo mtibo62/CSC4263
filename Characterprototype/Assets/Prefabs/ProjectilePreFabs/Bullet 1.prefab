@@ -118,7 +118,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anima: {fileID: 5203308466775582339, guid: 32f45a9dbd0d6a04d935ae539557f835, type: 3}
-  Inventory: {fileID: 2025777620, guid: 6daacd4907dc1ae4e9cb5a8e5ce4bdf4, type: 3}
+  Inventory: {fileID: 1047878280, guid: 5f946a24119edfd48a982e9cb777c483, type: 3}
+  velocity: {x: 0, y: 0}
   weaponType: 0
 --- !u!114 &3972535736592730551
 MonoBehaviour:
@@ -175,4 +176,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  trip2: {fileID: 0}
+  trip3: {fileID: 0}
   power: 20

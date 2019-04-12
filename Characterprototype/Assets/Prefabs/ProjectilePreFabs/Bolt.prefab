@@ -102,6 +102,23 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300016, guid: fc1849d7697d20f458346d0d69aaee62,
         type: 3}
+    - target: {fileID: 6139852416421536852, guid: 7155e4bc3267527479c39036248d0856,
+        type: 3}
+      propertyPath: anima
+      value: 
+      objectReference: {fileID: 1698813959323142690, guid: 28a708ad86b392a4e95f65e3682120d6,
+        type: 3}
+    - target: {fileID: 6139852416421536852, guid: 7155e4bc3267527479c39036248d0856,
+        type: 3}
+      propertyPath: Inventory
+      value: 
+      objectReference: {fileID: 1047878280, guid: 5f946a24119edfd48a982e9cb777c483,
+        type: 3}
+    - target: {fileID: 6139852416421536852, guid: 7155e4bc3267527479c39036248d0856,
+        type: 3}
+      propertyPath: weaponType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4300504518069926625, guid: 7155e4bc3267527479c39036248d0856,
         type: 3}
       propertyPath: power
