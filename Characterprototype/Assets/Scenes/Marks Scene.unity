@@ -5474,6 +5474,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5851676937380116379, guid: 8abfc6d0ccd5d6d4bb89dc0f69ce6679,
         type: 3}
+    - target: {fileID: 3527293839246912805, guid: 35d08707e09df3f479f55f37c4e5a4d5,
+        type: 3}
+      propertyPath: BoltFX
+      value: 
+      objectReference: {fileID: 8300000, guid: cab64e5625ddc9040bab772ddb5f5aa1, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35d08707e09df3f479f55f37c4e5a4d5, type: 3}
 --- !u!1001 &3746860921234263083

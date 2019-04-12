@@ -127,6 +127,7 @@
     <Compile Include="Assets\scripts\Enemies\Flame\FlameMove.cs" />
     <Compile Include="Assets\scripts\Enemies\Flame\flameShoot.cs" />
     <Compile Include="Assets\scripts\Enemies\Flame\FlameTrigger.cs" />
+    <Compile Include="Assets\scripts\Enemies\Flyer\Move.cs" />
     <Compile Include="Assets\scripts\Enemies\plant\plantmove.cs" />
     <Compile Include="Assets\scripts\Enemies\plant\plantshoot.cs" />
     <Compile Include="Assets\scripts\Enemies\plant\seedshoot.cs" />
