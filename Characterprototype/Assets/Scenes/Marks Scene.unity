@@ -574,6 +574,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfcd928533c668947a70be9d1e477e1f, type: 3}
+--- !u!1 &196941551 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3527293837339060277, guid: 35d08707e09df3f479f55f37c4e5a4d5,
+    type: 3}
+  m_PrefabInstance: {fileID: 3527293838711448455}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &219264055 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 27240583011103631, guid: d592f226d9f1b794c98674c22614a84b,
@@ -2516,6 +2522,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d592f226d9f1b794c98674c22614a84b, type: 3}
+--- !u!1 &1185136682 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3527293838509762073, guid: 35d08707e09df3f479f55f37c4e5a4d5,
+    type: 3}
+  m_PrefabInstance: {fileID: 3527293838711448455}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1200678659 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7730028723149217545, guid: 10fcf8a861f4ff84cac843a64736f17e,
@@ -2617,6 +2629,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfcd928533c668947a70be9d1e477e1f, type: 3}
+--- !u!1 &1261606695 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3527293838864860827, guid: 35d08707e09df3f479f55f37c4e5a4d5,
+    type: 3}
+  m_PrefabInstance: {fileID: 3527293838711448455}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1288342168 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3851485687398162789, guid: 1757655d27dff77448dc2328b47af4fe,
@@ -5396,6 +5414,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3527293838497161918, guid: 35d08707e09df3f479f55f37c4e5a4d5,
         type: 3}
+      propertyPath: bodyParts.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3527293838497161918, guid: 35d08707e09df3f479f55f37c4e5a4d5,
+        type: 3}
       propertyPath: gm
       value: 
       objectReference: {fileID: 636539309}
@@ -5409,6 +5432,21 @@ PrefabInstance:
       propertyPath: health
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3527293838497161918, guid: 35d08707e09df3f479f55f37c4e5a4d5,
+        type: 3}
+      propertyPath: bodyParts.Array.data[3]
+      value: 
+      objectReference: {fileID: 1261606695}
+    - target: {fileID: 3527293838497161918, guid: 35d08707e09df3f479f55f37c4e5a4d5,
+        type: 3}
+      propertyPath: bodyParts.Array.data[1]
+      value: 
+      objectReference: {fileID: 1185136682}
+    - target: {fileID: 3527293838497161918, guid: 35d08707e09df3f479f55f37c4e5a4d5,
+        type: 3}
+      propertyPath: bodyParts.Array.data[0]
+      value: 
+      objectReference: {fileID: 196941551}
     - target: {fileID: 3527293839246912804, guid: 35d08707e09df3f479f55f37c4e5a4d5,
         type: 3}
       propertyPath: inventory

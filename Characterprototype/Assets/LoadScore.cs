@@ -8,7 +8,7 @@ public class LoadScore : MonoBehaviour
     public Text text;
     void Start()
     {
-        text.text = PlayerPrefs.GetInt("Score").ToString();
+        text.text = PlayerPrefs.GetFloat("Score").ToString();
     }
 
    

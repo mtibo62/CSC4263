@@ -62,33 +62,14 @@ public class PlayerDamage : MonoBehaviour, IDamageable
       
         if (health <= 0)
         {
-            Explode();
+            Die();
         }
     }
-    private void Explode()
+    private void Die()
     {
-        for (int i = 0; i < bodyParts.Length; i++)
-        {
-            bodyParts[i].AddComponent<BoxCollider2D>();
-            bodyParts[i].AddComponent<Rigidbody2D>();
-        }
-
-
-        Rigidbody2D rb0 = bodyParts[0].GetComponent<Rigidbody2D>();
-        Rigidbody2D rb1 = bodyParts[1].GetComponent<Rigidbody2D>();
-        Rigidbody2D rb3 = bodyParts[3].GetComponent<Rigidbody2D>();
-        Rigidbody2D rb4 = bodyParts[4].GetComponent<Rigidbody2D>();
-
- 
-        rb0.velocity = new Vector2(-4f, 10f);
-        rb1.velocity = new Vector2(6f, 8f);
-        rb3.velocity = new Vector2(-8f, 4f);
-        rb4.velocity = new Vector2(7f, 9f);
-        //save the score and current level.
         PlayerPrefs.SetFloat("Score", gm.GetComponent<GameManager>().score);
         PlayerPrefs.SetString("Level", SceneManager.GetActiveScene().name);
         PlayerPrefs.Save();
         gm.GetComponent<GameManager>().isAlive = false;
-        Destroy(gameObject);
     }
 }
