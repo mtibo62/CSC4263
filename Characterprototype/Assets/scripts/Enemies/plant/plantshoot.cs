@@ -20,6 +20,8 @@ public class plantshoot : MonoBehaviour, ISetTarget
 
     private float angle; //degrees 
 
+    public AudioSource soundFx;
+    public AudioClip enemyFx;
 
 
     // Start is called before the first frame update
@@ -28,6 +30,7 @@ public class plantshoot : MonoBehaviour, ISetTarget
 
         rb = GetComponent<Rigidbody2D>();
         canShoot = 0;
+        soundFx = GetComponent<AudioSource>();
 
     }
 
@@ -61,7 +64,8 @@ public class plantshoot : MonoBehaviour, ISetTarget
         {
             if (direction(angle) == 1)
             {
-                
+                soundFx.clip = enemyFx;
+                soundFx.Play();
                 //sr.flipX = false;
                 GameObject go = Instantiate(projectile, shooterOpening.transform.position, Quaternion.identity);
                 go.GetComponent<Rigidbody2D>().velocity = new Vector2(velocity.x * transform.localScale.x, velocity.y);

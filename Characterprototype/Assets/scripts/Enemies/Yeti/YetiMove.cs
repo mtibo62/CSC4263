@@ -15,6 +15,9 @@ public class YetiMove : EnemyMove
 
     public float localScaleSetNum;
 
+    public AudioSource soundFx;
+    public AudioClip enemyFx;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,15 +26,20 @@ public class YetiMove : EnemyMove
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
+        soundFx = GetComponent<AudioSource>();
     }
 
     void Update()
     {
         if (target != null)
         {
+
+
             Move();
             if (!anim.GetBool("IsWalking"))
             {
+                soundFx.clip = enemyFx;
+                soundFx.Play();
                 anim.SetBool("IsWalking", true);
             }
         }

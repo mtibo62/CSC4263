@@ -15,12 +15,16 @@ public class EvilFlowerAttack : EnemyMove
 
     bool isAttacking;
 
+    public AudioSource soundFx;
+    public AudioClip enemyFx;
+
     // Start is called before the first frame update
     void Start()
     {
         localScaleSetNum = transform.localScale.x;
         hitBox.GetComponent<BoxCollider2D>().enabled = false;
         rb = GetComponent<Rigidbody2D>();
+        soundFx = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -57,7 +61,8 @@ public class EvilFlowerAttack : EnemyMove
     {
         yield return new WaitForSeconds(1f);
         hitBox.GetComponent<BoxCollider2D>().enabled = true;
-
+        soundFx.clip = enemyFx;
+        soundFx.Play();
         Debug.Log("Attack");
         yield return new WaitForSeconds(.2f);
         hitBox.GetComponent<BoxCollider2D>().enabled = false;

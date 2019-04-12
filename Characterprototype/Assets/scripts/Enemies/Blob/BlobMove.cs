@@ -11,11 +11,16 @@ public class BlobMove :  EnemyMove
     public int moveSpeed;
     public bool triggered;
 
+    public AudioSource soundFx;
+    public AudioClip enemyFx;
+
+
     // Start is called before the first frame update
     void Start()
     {
         triggered = false;
         rb = GetComponent<Rigidbody2D>();
+        soundFx = GetComponent<AudioSource>();
     }
 
 
@@ -24,6 +29,8 @@ public class BlobMove :  EnemyMove
     {
         if (target != null)
         {
+            soundFx.clip = enemyFx;
+            soundFx.Play();
             Vector2 dir = target.transform.position - rb.transform.position;
 
             if (GetComponent<EnemyDamage>().health > 0)
