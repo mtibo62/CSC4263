@@ -27,7 +27,7 @@ public class BlobMove :  EnemyMove
     // Update is called once per frame
     void Update()
     {
-        if (target != null)
+        if (target != null && triggered)
         {
             soundFx.clip = enemyFx;
             soundFx.Play();

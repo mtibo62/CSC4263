@@ -297,7 +297,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 5
 --- !u!61 &9210248599371751941
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -311,7 +311,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.074129105, y: 0.46573055}
+  m_Offset: {x: -0.031939924, y: -0.046673298}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -322,7 +322,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.966526, y: 4.5645504}
+  m_Size: {x: 2.7746058, y: 3.539743}
   m_EdgeRadius: 0
 --- !u!114 &9210248599371751942
 MonoBehaviour:
@@ -376,7 +376,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprites: []
   healthBar: {fileID: 0}
-  gm: {fileID: 0}
+  gm: {fileID: 5539419580375021996, guid: 9c201bf78acdef34fb6fb6634847720e, type: 3}
   health: 4
 --- !u!82 &8113244855242537074
 AudioSource:

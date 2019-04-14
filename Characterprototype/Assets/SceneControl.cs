@@ -7,7 +7,7 @@ public class SceneControl : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("Marks Scene");
+        SceneManager.LoadScene("SpaceShip");
     }
     public void ShowHelp()
     {

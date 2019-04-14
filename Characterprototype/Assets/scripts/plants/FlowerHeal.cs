@@ -65,7 +65,8 @@ public class FlowerHeal : MonoBehaviour
                 sr.sprite = flowers[9];
                 gm.GetComponent<GameManager>().score += 50;
                 GetComponent<IsHealed>().healed = true;
-                weapon.GetComponent<SpriteRenderer>().enabled = true;
+                if (weapon != null)
+                    weapon.GetComponent<SpriteRenderer>().enabled = true;
                 heal++;
                 break;
             case 10:

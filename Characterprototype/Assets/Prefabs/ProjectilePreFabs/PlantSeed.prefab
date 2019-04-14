@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1243965558390087097}
   m_Layer: 11
   m_Name: PlantSeed
-  m_TagString: BossBullet
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

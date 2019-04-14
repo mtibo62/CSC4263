@@ -97,6 +97,8 @@ public class FireWeapon : MonoBehaviour
                                 GameObject trip2 = Instantiate(tripPrefab1, transform.position, Quaternion.identity) as GameObject;
                                 GameObject trip3 = Instantiate(tripPrefab2, transform.position, Quaternion.identity) as GameObject;
                                 trip1.GetComponent<BulletCollision>().weaponType = weaponType;
+                                trip2.GetComponent<BulletCollision>().weaponType = weaponType;
+                                trip3.GetComponent<BulletCollision>().weaponType = weaponType;
                                 soundFx.clip = TripFX;
                                 soundFx.Play();
                                 break;
