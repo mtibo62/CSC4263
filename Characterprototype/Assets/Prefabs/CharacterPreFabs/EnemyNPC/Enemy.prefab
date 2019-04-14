@@ -199,7 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b69a3b10d416c948a942f4b8dc6e20e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 3527293838497161904, guid: 35d08707e09df3f479f55f37c4e5a4d5, type: 3}
+  target: {fileID: 0}
   rb: {fileID: 4127960180516036298}
   moveSpeed: 5
   triggered: 0
@@ -393,6 +393,7 @@ GameObject:
   - component: {fileID: 4127960180640575693}
   - component: {fileID: 4127960180640575667}
   - component: {fileID: 3477822492229393043}
+  - component: {fileID: 1237051178}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
@@ -495,9 +496,22 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4127960180640575665}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50249d7eb7d2c2949a9ee346badde93d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   blob: {fileID: 4127960180516036301}
+--- !u!114 &1237051178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4127960180640575665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a926a21a8f8a2b743a787f696308c6e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 4127960180516036301}
