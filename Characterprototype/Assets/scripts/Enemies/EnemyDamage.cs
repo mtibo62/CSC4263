@@ -30,7 +30,7 @@ public class EnemyDamage : MonoBehaviour
             health--;
         }
         if (col.gameObject.tag == "iceshot")
-            health -= 5;
+            health -= 2;
 
     }
     // Update is called once per frame
@@ -53,8 +53,8 @@ public class EnemyDamage : MonoBehaviour
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
             rb.AddForce(new Vector2(0, 5));
         }
-        //if (gameObject.transform.position.y < -8)
-        //    Destroy(gameObject);
+        if (gameObject.transform.position.y < -8)
+              Destroy(gameObject);
 
     }
 

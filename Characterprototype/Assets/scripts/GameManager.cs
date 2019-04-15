@@ -16,11 +16,13 @@ public class GameManager : MonoBehaviour
     private float numLevelAssets;
     private float assetsLeft;
     private float progress;
+    private float healed, killed;
     // Start is called before the first frame update
     void Start()
     {
         Cursor.visible = false;
         numLevelAssets = plants.Count + enemies.Count;
+        healed = killed = 0;
         isAlive = true;
     }
 
@@ -33,17 +35,23 @@ public class GameManager : MonoBehaviour
             sc.GetComponent<SceneControl>().Die();
         }
 
-        progress = (((plants.Count + enemies.Count) / numLevelAssets) * 100);
+        progress = (((healed+killed) / numLevelAssets) * 100);
         levelProgress.text = progress.ToString();
         for (int i = 0; i < plants.Count; i++)
         {
             if (plants[i].GetComponent<IsHealed>().healed)
+            {
                 plants.RemoveAt(i);
+                healed++;
+            }
         }
         for (int i = 0; i < enemies.Count; i++)
         {
-            if (enemies[i] == null)
+            if (!enemies[i].GetComponent<BoxCollider2D>().enabled)
+            {
                 enemies.RemoveAt(i);
+                killed++;
+            }
         }
         scoreText.text = score.ToString();
 
