@@ -30,4 +30,17 @@ public class SceneControl : MonoBehaviour
     {
         SceneManager.LoadScene("StartMenu");
     }
+    public void NextLevel()
+    {
+        if (SceneManager.GetActiveScene().name == "SpaceShip")
+            SceneManager.LoadScene("GrassLevel");
+        if (SceneManager.GetActiveScene().name == "GrassLevel")
+            SceneManager.LoadScene("FireLevel");
+        if (SceneManager.GetActiveScene().name == "FireLevel")
+            SceneManager.LoadScene("Victory");
+    }
+    public void LoadCredits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
 }
