@@ -12,7 +12,6 @@ public class shooter : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-
         target = new Vector2(player.position.x, player.position.y);
 
     }
@@ -20,24 +19,10 @@ public class shooter : MonoBehaviour
     {
         transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
 
-        if (transform.position.x == target.x && transform.position.y == target.y)
-        {
-            Destroyshooter();
-        }
-
-
-        void OnTriggerEnter2D(Collider2D other)
-        {
-            if (other.CompareTag("Player"))
-            {
-
-            }
-
-        }
     }
-}
-void shooter()
-{
-    Destro(gameObject);
-}
+    private void OnCollisionE2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+            Destroy(gameObject);
+    }
 }
