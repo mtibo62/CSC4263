@@ -97,6 +97,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  trip2: {fileID: 0}
+  trip3: {fileID: 0}
   power: 15
 --- !u!114 &4079004686178858130
 MonoBehaviour:
@@ -110,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed288f4807e9fe2499ba5f72a4cb5912, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 5
+  timer: 3
   anima: {fileID: 5871683736559018568, guid: f7cc83c4e537d58459e83cb5feaf5119, type: 3}
 --- !u!50 &4079004686178858131
 Rigidbody2D:

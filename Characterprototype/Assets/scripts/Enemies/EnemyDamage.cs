@@ -8,6 +8,8 @@ public class EnemyDamage : MonoBehaviour
     public GameObject healthBar;
     public GameObject gm;
     public int health = 8;
+    public float localPos;
+
 
     private SpriteRenderer sr;
     private int scored;
@@ -20,6 +22,7 @@ public class EnemyDamage : MonoBehaviour
         //sr = healthBar.GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         scored = 0;
+        localPos = transform.localScale.y;
     }
 
     private void OnCollisionEnter2D(Collision2D col)
@@ -53,7 +56,7 @@ public class EnemyDamage : MonoBehaviour
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
             rb.AddForce(new Vector2(0, 5));
         }
-        if (gameObject.transform.position.y < -8)
+        if (localPos < localPos-8)
               Destroy(gameObject);
 
     }
