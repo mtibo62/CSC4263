@@ -28,7 +28,7 @@ public class PlayerDamage : MonoBehaviour, IDamageable
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if ((col.gameObject.tag == "enemy" ) && canTakeDamage)
+        if ((col.gameObject.tag == "enemy" || col.gameObject.tag == "BossBullet") && canTakeDamage)
         {
             canTakeDamage = false;
             coolDown = 2;
