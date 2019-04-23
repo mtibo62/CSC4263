@@ -240,7 +240,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 5
 --- !u!61 &3746860919625576993
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -319,6 +319,7 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   gm: {fileID: 0}
   health: 8
+  localPos: 0
 --- !u!95 &3746860919625577018
 Animator:
   serializedVersion: 3
