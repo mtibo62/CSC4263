@@ -10529,6 +10529,11 @@ PrefabInstance:
       propertyPath: plants.Array.data[4]
       value: 
       objectReference: {fileID: 1228462251}
+    - target: {fileID: 5539419580375021995, guid: 9c201bf78acdef34fb6fb6634847720e,
+        type: 3}
+      propertyPath: score
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c201bf78acdef34fb6fb6634847720e, type: 3}
 --- !u!4 &1617107408 stripped
