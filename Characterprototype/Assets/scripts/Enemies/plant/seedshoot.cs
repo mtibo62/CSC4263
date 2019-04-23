@@ -37,7 +37,7 @@ public class seedshoot : MonoBehaviour
         //rb.velocity = new Vector2(velocity.x, -velocity.y);
 
 
-        //if (col.gameObject.tag== "Player")
+        if (col.gameObject.tag== "Player")
         {
             //anim = Instantiate(anima, transform.position, Quaternion.identity) as GameObject;
             Destroy(gameObject);
