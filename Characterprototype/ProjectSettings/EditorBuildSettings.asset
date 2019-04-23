@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/GrassLevel.unity
     guid: 3a8ec90baa815864cb9dff07a868dd04
   - enabled: 1
+    path: Assets/Scenes/IceLevel.unity
+    guid: 4289a93840a5c744a949e97526cfd4d7
+  - enabled: 1
     path: Assets/Scenes/FireLevel.unity
     guid: ffa4488d890457a46bad3e3756b85800
   - enabled: 1
