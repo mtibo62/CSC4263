@@ -31,13 +31,13 @@ public class seedshoot : MonoBehaviour
     }
 
 
-    void OnTriggerEnter2D(Collider2D col)
+    void OnCollisionEnter2D(Collision2D col)
     {
 
         //rb.velocity = new Vector2(velocity.x, -velocity.y);
 
 
-        if (col.tag == "Player")
+        if (col.gameObject.tag== "Player")
         {
             //anim = Instantiate(anima, transform.position, Quaternion.identity) as GameObject;
             Destroy(gameObject);
