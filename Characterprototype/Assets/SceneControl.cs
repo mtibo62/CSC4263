@@ -37,7 +37,10 @@ public class SceneControl : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "GrassLevel")
             SceneManager.LoadScene("FireLevel");
         if (SceneManager.GetActiveScene().name == "FireLevel")
+        {
+            Cursor.visible = true;
             SceneManager.LoadScene("Victory");
+        }
     }
     public void LoadCredits()
     {
