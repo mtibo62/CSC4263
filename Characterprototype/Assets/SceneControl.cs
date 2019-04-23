@@ -35,6 +35,8 @@ public class SceneControl : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "SpaceShip")
             SceneManager.LoadScene("GrassLevel");
         if (SceneManager.GetActiveScene().name == "GrassLevel")
+            SceneManager.LoadScene("IceLevel");
+        if (SceneManager.GetActiveScene().name == "IceLevel")
             SceneManager.LoadScene("FireLevel");
         if (SceneManager.GetActiveScene().name == "FireLevel")
         {
