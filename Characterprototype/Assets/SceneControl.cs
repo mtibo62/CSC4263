@@ -48,4 +48,28 @@ public class SceneControl : MonoBehaviour
     {
         SceneManager.LoadScene("Credits");
     }
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+    public void Space()
+    {
+        SceneManager.LoadScene("SpaceShip");
+    }
+    public void Grass()
+    {
+        SceneManager.LoadScene("GrassLevel");
+    }
+    public void Ice()
+    {
+        SceneManager.LoadScene("IceLevel");
+    }
+    public void Fire()
+    {
+        SceneManager.LoadScene("FireLevel");
+    }
+    public void LevelSelect()
+    {
+        SceneManager.LoadScene("LevelSelect");
+    }
 }
